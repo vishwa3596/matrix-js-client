@@ -1,5 +1,5 @@
 import react, {useState, useEffect} from "react";
-import login from "./login";
+import { login } from "./login";
 
 const CreateNewClient = () => {
     const [username, setUsername] = useState("Initial Name");
@@ -11,7 +11,6 @@ const CreateNewClient = () => {
 	const val = await login();
 	console.log(val);
     }
-
     
     return(
 	<div>
