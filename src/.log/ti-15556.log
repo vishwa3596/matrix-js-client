@@ -1,0 +1,55 @@
+[11:49:06.656] Global cache location 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4', safe file path 'f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/typingsafelist.json', types map path f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/typesmap.json
+[11:49:06.657] Processing cache location 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4'
+[11:49:06.658] Trying to find 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/package.json'...
+[11:49:06.662] Loaded content of 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/package.json': {"private":true,"dependencies":{"types-registry":"^0.1.564"},"devDependencies":{"@types/async":"^3.2.8","@types/atob":"^2.1.2","@types/bootstrap":"^5.1.6","@types/lz-string":"^1.3.34","@types/micromatch":"^4.0.2","@types/normalize-path":"^3.0.0","@types/object-assign":"^4.0.30","@types/react":"^17.0.30","@types/react-dom":"^17.0.9","@types/sprintf":"^0.1.0","@types/tapable":"^2.2.2","@types/testing-library__jest-dom":"^5.14.1","@types/tryer":"^1.0.2","@types/webpack-sources":"^3.2.0"}}
+[11:49:06.663] Loaded content of 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/package-lock.json'
+[11:49:06.678] Adding entry into typings cache: 'async' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/async/index.d.ts'
+[11:49:06.685] Adding entry into typings cache: 'atob' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/atob/index.d.ts'
+[11:49:06.690] Adding entry into typings cache: 'bootstrap' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/bootstrap/index.d.ts'
+[11:49:06.694] Adding entry into typings cache: 'lz-string' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/lz-string/index.d.ts'
+[11:49:06.699] Adding entry into typings cache: 'micromatch' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/micromatch/index.d.ts'
+[11:49:06.703] Adding entry into typings cache: 'normalize-path' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/normalize-path/index.d.ts'
+[11:49:06.708] Adding entry into typings cache: 'object-assign' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/object-assign/index.d.ts'
+[11:49:06.715] Adding entry into typings cache: 'react' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/react/index.d.ts'
+[11:49:06.723] Adding entry into typings cache: 'react-dom' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/react-dom/index.d.ts'
+[11:49:06.727] Adding entry into typings cache: 'sprintf' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/sprintf/index.d.ts'
+[11:49:06.731] Adding entry into typings cache: 'tapable' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/tapable/tapable.d.ts'
+[11:49:06.734] Adding entry into typings cache: 'testing-library__jest-dom' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/testing-library__jest-dom/index.d.ts'
+[11:49:06.737] Adding entry into typings cache: 'tryer' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/tryer/index.d.ts'
+[11:49:06.740] Adding entry into typings cache: 'webpack-sources' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/webpack-sources/index.d.ts'
+[11:49:06.740] Finished processing cache location 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4'
+[11:49:06.741] Process id: 12204
+[11:49:06.741] NPM location: "C:\Program Files\nodejs\npm" (explicit '--npmLocation' not  provided)
+[11:49:06.741] validateDefaultNpmLocation: false
+[11:49:06.741] Npm config file: C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/package.json
+[11:49:06.741] Updating types-registry npm package...
+[11:49:06.742] Exec: "C:\Program Files\nodejs\npm" install --ignore-scripts types-registry@latest
+[11:49:09.793]     Succeeded. stdout:
+    + types-registry@0.1.564
+    updated 1 package and audited 46 packages in 1.894s
+
+4 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+
+[11:49:09.793] Updated types-registry npm package
+[11:49:16.087] Got install request {"projectName":"/dev/null/inferredProject1*","fileNames":["f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es5.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2016.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.dom.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.dom.iterable.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.webworker.importscripts.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.scripthost.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.core.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.collection.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.generator.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.iterable.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.promise.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.proxy.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.reflect.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.symbol.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2016.array.include.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2016.full.d.ts","f:/dev/matrix-js-client/src/component/CreateNewClient.js"],"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typeAcquisition":{"enable":true,"include":[],"exclude":[]},"unresolvedImports":["@matrix-org/olm"],"projectRootPath":"f:/dev/matrix-js-client/src/component","kind":"discover"}
+[11:49:16.104] Loaded safelist from types map file 'f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/typesmap.json'
+[11:49:16.105] Explicitly included types: []
+[11:49:16.106] Inferred typings from unresolved imports: ["@matrix-org/olm"]
+[11:49:16.106] Result: {"cachedTypingPaths":[],"newTypingNames":["@matrix-org/olm"],"filesToWatch":["f:/dev/matrix-js-client/src/component/bower_components","f:/dev/matrix-js-client/src/component/node_modules"]}
+[11:49:16.107] Finished typings discovery: {"cachedTypingPaths":[],"newTypingNames":["@matrix-org/olm"],"filesToWatch":["f:/dev/matrix-js-client/src/component/bower_components","f:/dev/matrix-js-client/src/component/node_modules"]}
+[11:49:16.107] DirectoryWatcher:: Added:: WatchInfo: f:/dev/matrix-js-client/src/component/bower_components
+[11:49:16.107] DirectoryWatcher:: Added:: WatchInfo: f:/dev/matrix-js-client/src/component/bower_components 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[11:49:16.109] Elapsed:: 1.3536000000312924ms DirectoryWatcher:: Added:: WatchInfo: f:/dev/matrix-js-client/src/component/bower_components 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[11:49:16.109] DirectoryWatcher:: Added:: WatchInfo: f:/dev/matrix-js-client/src/component/node_modules
+[11:49:16.109] DirectoryWatcher:: Added:: WatchInfo: f:/dev/matrix-js-client/src/component/node_modules 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[11:49:16.109] Elapsed:: 0.10140000004321337ms DirectoryWatcher:: Added:: WatchInfo: f:/dev/matrix-js-client/src/component/node_modules 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[11:49:16.110] Installing typings ["@matrix-org/olm"]
+[11:49:16.110] '@matrix-org/olm':: Entry for package 'matrix-org__olm' does not exist in local types registry - skipping...
+[11:49:16.110] All typings are known to be missing or invalid - no need to install more typings
+[11:49:16.111] Sending response:
+    {"projectName":"/dev/null/inferredProject1*","typeAcquisition":{"enable":true,"include":[],"exclude":[]},"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typings":[],"unresolvedImports":["@matrix-org/olm"],"kind":"action::set"}
+[11:49:16.111] Response has been sent.
