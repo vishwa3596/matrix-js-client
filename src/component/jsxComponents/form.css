@@ -1,0 +1,5 @@
+.passwordField input[type='password']::-ms-reveal,
+.passwordField input[type='password']::-ms-clear {
+  display: none;
+}
+

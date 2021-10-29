@@ -11,6 +11,7 @@ import FormHelperText from '@mui/material/FormHelperText';
 import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import './form.css'
 
 const RegistrationForm = () => {
     const [values, setValues] = useState({
@@ -24,7 +25,9 @@ const RegistrationForm = () => {
 
 
     const handleUsernameChange = (event) => {
-	setValues({...values, username: event.target.value
+	setValues({
+	    ...values,
+	    username: event.target.value
 	})
     }
     const handlePasswordChange = (event) => {
@@ -37,11 +40,8 @@ const RegistrationForm = () => {
 	    ['showPassword']: !values.showPassword,
 	})
     }
-    const handleMouseDownPassword = () => {
-	setValues({
-	    ...values,
-	    showPassword: !values.showPassword,
-	})
+    const handleMouseDownPassword = (event) => {
+	event.preventDefault();
     }
 	
     return(
@@ -53,34 +53,32 @@ const RegistrationForm = () => {
 	    noValidate
 	    autoComplete="off"
 	>
-	    <TextField id="outlined-basic"
-		       value={values.username}
-		       label="username"
-		       variant="outlined"
-		       onClick={handleUsernameChange}
-	    />
-	<FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-          <OutlinedInput
-            id="outlined-adornment-password"
-            type={values.showPassword ? 'text' : 'password'}
-            value={values.password}
-            onChange={handlePasswordChange}
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
-                  edge="end"
-                >
-                  {values.showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            }
-            label="Password"
-          />
-        </FormControl>
+	<TextField id="outlined-basic"
+		    value={values.username}
+		    label="username"
+		    variant="outlined"
+		    onChange={handleUsernameChange}
+	/>
+	<TextField
+	    label="Password"
+	    className="passwordField"
+	    variant="outlined"
+	    type={values.showPassword?'text':'password'}
+	    onChange={handlePasswordChange}
+	    InputProps={{ // <-- This is where the toggle button is added.
+		endAdornment: (
+		<InputAdornment position="end">
+		    <IconButton
+		    aria-label="toggle password visibility"
+		    onClick={handleClickShowPassword}
+		    onMouseDown={handleMouseDownPassword}
+		    >
+		    {values.showPassword ? <Visibility /> : <VisibilityOff />}
+		    </IconButton>
+		</InputAdornment>
+		)
+	    }}
+	/>
 	</Box>
     );
 }
