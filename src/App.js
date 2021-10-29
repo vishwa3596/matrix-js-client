@@ -1,4 +1,4 @@
-import Homepage from "./component/Homepage"
+import Homepage from "./component/jsxComponents/Homepage"
 import './App.css';
 
 function App() {
