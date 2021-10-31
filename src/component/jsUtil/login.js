@@ -1,12 +1,14 @@
 import sdk from "matrix-js-sdk"
 import Storage from "./storage"
 
-const createClient = () => {
+const createClient = (username, password) => {
+    Storage.userName = username
+    Storage.password = password
     return sdk.createClient(Storage.baseUrl);
 }
     
-const login = async() => {
-    const Client = createClient();
+const login = async(username, password) => {
+    const Client = createClient(username, password);
     try{
 	const client = await Client.login("m.login.password",{"user":Storage.userName,
 							  "password":Storage.password});

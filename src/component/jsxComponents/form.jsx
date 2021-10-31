@@ -11,6 +11,7 @@ import FormHelperText from '@mui/material/FormHelperText';
 import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import Button from '@mui/material/Button';
 import './form.css'
 
 const RegistrationForm = () => {
@@ -43,12 +44,22 @@ const RegistrationForm = () => {
     const handleMouseDownPassword = (event) => {
 	event.preventDefault();
     }
+
+    const handleSubmit = () => {
+	const username = values.username;
+	const password  = values.password;
+	this.props.loginInfo(username, password);
+    }
 	
     return(
 	<Box
 	    component="form"
 	    sx={{
 		'& > :not(style)': { m: 1, width: '25ch' },
+		'border': `${1}px solid`,
+		'borderRadius': 3,
+		'display': 'inline-grid',
+		'gap': 5
 	    }}
 	    noValidate
 	    autoComplete="off"
@@ -79,6 +90,7 @@ const RegistrationForm = () => {
 		)
 	    }}
 	/>
+	<Button variant="contained" color="success" onSubmit={handleSubmit}> Login </Button>
 	</Box>
     );
 }
