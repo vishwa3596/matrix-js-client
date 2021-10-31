@@ -14,13 +14,11 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Button from '@mui/material/Button';
 import './form.css'
 
-const RegistrationForm = () => {
+const RegistrationForm = (props) => {
     const [values, setValues] = useState({
 	username: '',
 	amount: '',
 	password: '',
-	weight: '',
-	weightRange: '',
 	showPassword: false,
     });
 
@@ -48,7 +46,7 @@ const RegistrationForm = () => {
     const handleSubmit = () => {
 	const username = values.username;
 	const password  = values.password;
-	this.props.loginInfo(username, password);
+	props.onSavingData(username, password);
     }
 	
     return(
@@ -90,7 +88,7 @@ const RegistrationForm = () => {
 		)
 	    }}
 	/>
-	<Button variant="contained" color="success" onSubmit={handleSubmit}> Login </Button>
+	<Button variant="contained" color="success" onClick={handleSubmit}> Login </Button>
 	</Box>
     );
 }
