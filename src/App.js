@@ -1,11 +1,13 @@
-import Homepage from "./component/jsxComponents/Homepage"
-import './App.css';
+import Homepage from "./component/jsxComponents/Homepage";
+import "./App.css";
+import { ThemeProvider } from "@mui/material";
+import theme from "./component/jsxComponents/individualComponents/Theme";
 
 function App() {
   return (
-    <div className="App">
-	  <Homepage/>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Homepage />
+    </ThemeProvider>
   );
 }
 

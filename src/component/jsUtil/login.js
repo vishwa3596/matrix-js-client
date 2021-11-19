@@ -1,46 +1,26 @@
-import sdk from "matrix-js-sdk"
-import Storage from "./storage"
+import sdk from "matrix-js-sdk";
+import { storage } from "./storage.js";
 
-const createClient = (username, password) => {
-    return sdk.createClient(Storage.baseUrl);
-}
-    
-const login = async(username, password) => {
-    const Client = createClient(username, password);
-    console.log(username, password);
-    try{
-	const client = await Client.login("m.login.password",{"user":Storage.userName,
-							  "password":Storage.password});
-	console.log(" from log in js" , client);
-	Client.startClient();
-	Client.once('sync', (state, prevState, res) => {
-	    switch(state){
-	    case "ERROR":
-		console.log("error occured ", state, " ", prevState);
-		break;
-	    case "SYNCING":
-		console.log("syncing");
-		break;
-	    case "PREPARED":
-		const rooms = Client.getRooms();
-		console.log(typeof(rooms));
-		console.log(rooms);
-		break;
-	    }
-	});
-    }
-    catch (e){
-	console.log("login failed", + e)
-    }
-}
+export const createClient = (username, password) => {
+  return sdk.createClient(storage.baseUrl);
+};
 
-const registration = async() => {
-    /* user registration for the matrix client */
-
-    
-}
-
-
-export {
-    login, createClient
+/**
+ * The login with the http request is giving cors error and I'm not able to figure it out till now and for now (18/11/2021) I think  i should be moving ahead with the matrix-js-sdk and should come to figure out this later on. base usl can be found out by printing the reposine log from the login response
+ *
+ *
+ * 6. Filtering -> This api helps us to apply certain filter to the server
+ * while fetching the query like the list of room you have left gets added
+ * to the No_longer_room -> and this is passed to the server to identify
+ * all those rooms which you are not a part off this is not a concreate ex.
+ * The usecase might vary depending on the client request which all thing they
+ * want to see.
+ * */
+export const login = async (username, password) => {
+  const Client = createClient(username, password);
+  let loginResponse = await Client.login("m.login.password", {
+    user: username,
+    password: password,
+  });
+  return Client;
 };

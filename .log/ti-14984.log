@@ -1,0 +1,146 @@
+[23:31:31.466] Global cache location 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4', safe file path 'f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/typingsafelist.json', types map path f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/typesmap.json
+[23:31:31.467] Processing cache location 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4'
+[23:31:31.468] Trying to find 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/package.json'...
+[23:31:31.473] Loaded content of 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/package.json': {"private":true,"dependencies":{"types-registry":"^0.1.565"},"devDependencies":{"@types/abbrev":"^1.1.2","@types/asn1":"^0.2.0","@types/assert-plus":"^1.0.4","@types/async":"^3.2.8","@types/atob":"^2.1.2","@types/aws4":"^1.11.0","@types/balanced-match":"^1.0.1","@types/bootstrap":"^5.1.6","@types/brace-expansion":"^1.1.0","@types/braces":"^3.0.1","@types/bs58":"^4.0.1","@types/cacheable-request":"^6.0.2","@types/call-bind":"^1.0.0","@types/caseless":"^0.12.2","@types/color-convert":"^2.0.0","@types/color-name":"^1.1.1","@types/combined-stream":"^1.0.3","@types/concat-map":"0.0.1","@types/configstore":"^5.0.1","@types/content-type":"^1.1.5","@types/dashdash":"^1.14.1","@types/debug":"^4.1.7","@types/deep-extend":"^0.4.32","@types/duplexer3":"^0.1.1","@types/end-of-stream":"^1.4.1","@types/extend":"^3.0.1","@types/extsprintf":"^1.4.1","@types/follow-redirects":"^1.13.1","@types/forever-agent":"^0.6.1","@types/function-bind":"^1.1.6","@types/get-intrinsic":"^1.0.0","@types/getpass":"^0.1.1","@types/glob-parent":"^5.1.1","@types/got":"^9.6.12","@types/graceful-fs":"^4.1.5","@types/has":"^1.0.0","@types/has-symbols":"^1.0.0","@types/http-cache-semantics":"^4.0.1","@types/imurmurhash":"^0.1.1","@types/ini":"^1.3.31","@types/is-ci":"^3.0.0","@types/is-glob":"^4.0.2","@types/is-number":"^7.0.1","@types/is-typedarray":"^1.0.0","@types/isstream":"^0.1.0","@types/jsbn":"^1.2.29","@types/json-buffer":"^3.0.0","@types/json-schema":"^7.0.9","@types/json-stringify-safe":"^5.0.0","@types/keyv":"^3.1.3","@types/lru-cache":"^5.1.1","@types/lz-string":"^1.3.34","@types/micromatch":"^4.0.2","@types/mime-db":"^1.43.1","@types/mime-types":"^2.1.1","@types/minimatch":"^3.0.5","@types/minimist":"^1.2.2","@types/ms":"^0.7.31","@types/nodemon":"^1.19.1","@types/nopt":"^3.0.29","@types/normalize-path":"^3.0.0","@types/object-assign":"^4.0.30","@types/object-inspect":"^1.8.1","@types/once":"^1.4.0","@types/picomatch":"^2.3.0","@types/psl":"^1.1.0","@types/pump":"^1.1.1","@types/punycode":"^2.1.0","@types/qs":"^6.9.7","@types/rc":"^1.2.0","@types/react":"^17.0.33","@types/react-dom":"^17.0.9","@types/regenerator-runtime":"^0.13.1","@types/registry-auth-token":"^4.2.1","@types/request":"^2.48.7","@types/responselike":"^1.0.0","@types/retry":"^0.12.1","@types/safer-buffer":"^2.1.0","@types/semver":"^7.3.9","@types/signal-exit":"^3.0.1","@types/sprintf":"^0.1.0","@types/sshpk":"^1.10.7","@types/supports-color":"^8.1.1","@types/tapable":"^2.2.2","@types/testing-library__jest-dom":"^5.14.1","@types/touch":"^3.1.2","@types/tough-cookie":"^4.0.1","@types/tryer":"^1.0.2","@types/update-notifier":"^5.1.0","@types/url-parse-lax":"^5.0.0","@types/uuid":"^8.3.1","@types/verror":"^1.10.5","@types/webpack-sources":"^3.2.0","@types/wrap-ansi":"^8.0.1","@types/write-file-atomic":"^3.0.2","@types/yallist":"^4.0.1"}}
+[23:31:31.474] Loaded content of 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/package-lock.json'
+[23:31:31.488] Adding entry into typings cache: 'abbrev' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/abbrev/index.d.ts'
+[23:31:31.493] Adding entry into typings cache: 'asn1' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/asn1/index.d.ts'
+[23:31:31.497] Adding entry into typings cache: 'assert-plus' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/assert-plus/index.d.ts'
+[23:31:31.502] Adding entry into typings cache: 'async' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/async/index.d.ts'
+[23:31:31.506] Adding entry into typings cache: 'atob' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/atob/index.d.ts'
+[23:31:31.509] Adding entry into typings cache: 'aws4' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/aws4/index.d.ts'
+[23:31:31.513] Adding entry into typings cache: 'balanced-match' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/balanced-match/index.d.ts'
+[23:31:31.518] Adding entry into typings cache: 'bootstrap' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/bootstrap/index.d.ts'
+[23:31:31.521] Adding entry into typings cache: 'brace-expansion' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/brace-expansion/index.d.ts'
+[23:31:31.525] Adding entry into typings cache: 'braces' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/braces/index.d.ts'
+[23:31:31.530] Adding entry into typings cache: 'bs58' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/bs58/index.d.ts'
+[23:31:31.534] Adding entry into typings cache: 'cacheable-request' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/cacheable-request/index.d.ts'
+[23:31:31.538] Adding entry into typings cache: 'call-bind' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/call-bind/index.d.ts'
+[23:31:31.541] Adding entry into typings cache: 'caseless' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/caseless/index.d.ts'
+[23:31:31.548] Adding entry into typings cache: 'color-convert' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/color-convert/index.d.ts'
+[23:31:31.554] Adding entry into typings cache: 'color-name' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/color-name/index.d.ts'
+[23:31:31.559] Adding entry into typings cache: 'combined-stream' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/combined-stream/index.d.ts'
+[23:31:31.562] Adding entry into typings cache: 'concat-map' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/concat-map/index.d.ts'
+[23:31:31.565] Adding entry into typings cache: 'configstore' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/configstore/index.d.ts'
+[23:31:31.569] Adding entry into typings cache: 'content-type' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/content-type/index.d.ts'
+[23:31:31.572] Adding entry into typings cache: 'dashdash' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/dashdash/index.d.ts'
+[23:31:31.577] Adding entry into typings cache: 'debug' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/debug/index.d.ts'
+[23:31:31.580] Adding entry into typings cache: 'deep-extend' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/deep-extend/index.d.ts'
+[23:31:31.584] Adding entry into typings cache: 'duplexer3' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/duplexer3/index.d.ts'
+[23:31:31.586] Adding entry into typings cache: 'end-of-stream' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/end-of-stream/index.d.ts'
+[23:31:31.589] Adding entry into typings cache: 'extend' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/extend/index.d.ts'
+[23:31:31.592] Adding entry into typings cache: 'extsprintf' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/extsprintf/index.d.ts'
+[23:31:31.595] Adding entry into typings cache: 'follow-redirects' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/follow-redirects/index.d.ts'
+[23:31:31.598] Adding entry into typings cache: 'forever-agent' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/forever-agent/index.d.ts'
+[23:31:31.601] Adding entry into typings cache: 'function-bind' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/function-bind/index.d.ts'
+[23:31:31.603] Adding entry into typings cache: 'get-intrinsic' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/get-intrinsic/index.d.ts'
+[23:31:31.608] Adding entry into typings cache: 'getpass' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/getpass/index.d.ts'
+[23:31:31.611] Adding entry into typings cache: 'glob-parent' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/glob-parent/index.d.ts'
+[23:31:31.614] Adding entry into typings cache: 'got' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/got/index.d.ts'
+[23:31:31.616] Adding entry into typings cache: 'graceful-fs' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/graceful-fs/index.d.ts'
+[23:31:31.621] Adding entry into typings cache: 'has' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/has/index.d.ts'
+[23:31:31.624] Adding entry into typings cache: 'has-symbols' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/has-symbols/index.d.ts'
+[23:31:31.627] Adding entry into typings cache: 'http-cache-semantics' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/http-cache-semantics/index.d.ts'
+[23:31:31.629] Adding entry into typings cache: 'imurmurhash' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/imurmurhash/index.d.ts'
+[23:31:31.631] Adding entry into typings cache: 'ini' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/ini/index.d.ts'
+[23:31:31.635] Adding entry into typings cache: 'is-ci' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/is-ci/index.d.ts'
+[23:31:31.639] Adding entry into typings cache: 'is-glob' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/is-glob/index.d.ts'
+[23:31:31.642] Adding entry into typings cache: 'is-number' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/is-number/index.d.ts'
+[23:31:31.645] Adding entry into typings cache: 'is-typedarray' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/is-typedarray/index.d.ts'
+[23:31:31.648] Adding entry into typings cache: 'isstream' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/isstream/index.d.ts'
+[23:31:31.651] Adding entry into typings cache: 'jsbn' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/jsbn/index.d.ts'
+[23:31:31.654] Adding entry into typings cache: 'json-buffer' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/json-buffer/index.d.ts'
+[23:31:31.658] Adding entry into typings cache: 'json-schema' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/json-schema/index.d.ts'
+[23:31:31.660] Adding entry into typings cache: 'json-stringify-safe' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/json-stringify-safe/index.d.ts'
+[23:31:31.663] Adding entry into typings cache: 'keyv' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/keyv/index.d.ts'
+[23:31:31.665] Adding entry into typings cache: 'lru-cache' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/lru-cache/index.d.ts'
+[23:31:31.668] Adding entry into typings cache: 'lz-string' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/lz-string/index.d.ts'
+[23:31:31.670] Adding entry into typings cache: 'micromatch' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/micromatch/index.d.ts'
+[23:31:31.675] Adding entry into typings cache: 'mime-db' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/mime-db/index.d.ts'
+[23:31:31.680] Adding entry into typings cache: 'mime-types' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/mime-types/index.d.ts'
+[23:31:31.683] Adding entry into typings cache: 'minimatch' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/minimatch/index.d.ts'
+[23:31:31.685] Adding entry into typings cache: 'minimist' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/minimist/index.d.ts'
+[23:31:31.688] Adding entry into typings cache: 'ms' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/ms/index.d.ts'
+[23:31:31.690] Adding entry into typings cache: 'nodemon' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/nodemon/index.d.ts'
+[23:31:31.692] Adding entry into typings cache: 'nopt' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/nopt/index.d.ts'
+[23:31:31.696] Adding entry into typings cache: 'normalize-path' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/normalize-path/index.d.ts'
+[23:31:31.699] Adding entry into typings cache: 'object-assign' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/object-assign/index.d.ts'
+[23:31:31.701] Adding entry into typings cache: 'object-inspect' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/object-inspect/index.d.ts'
+[23:31:31.705] Adding entry into typings cache: 'once' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/once/index.d.ts'
+[23:31:31.710] Adding entry into typings cache: 'picomatch' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/picomatch/index.d.ts'
+[23:31:31.714] Adding entry into typings cache: 'psl' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/psl/index.d.ts'
+[23:31:31.717] Adding entry into typings cache: 'pump' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/pump/index.d.ts'
+[23:31:31.720] Adding entry into typings cache: 'punycode' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/punycode/index.d.ts'
+[23:31:31.723] Adding entry into typings cache: 'qs' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/qs/index.d.ts'
+[23:31:31.725] Adding entry into typings cache: 'rc' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/rc/index.d.ts'
+[23:31:31.729] Adding entry into typings cache: 'react' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/react/index.d.ts'
+[23:31:31.732] Adding entry into typings cache: 'react-dom' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/react-dom/index.d.ts'
+[23:31:31.735] Adding entry into typings cache: 'regenerator-runtime' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/regenerator-runtime/index.d.ts'
+[23:31:31.738] Adding entry into typings cache: 'registry-auth-token' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/registry-auth-token/index.d.ts'
+[23:31:31.740] Adding entry into typings cache: 'request' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/request/index.d.ts'
+[23:31:31.743] Adding entry into typings cache: 'responselike' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/responselike/index.d.ts'
+[23:31:31.746] Adding entry into typings cache: 'retry' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/retry/index.d.ts'
+[23:31:31.748] Adding entry into typings cache: 'safer-buffer' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/safer-buffer/index.d.ts'
+[23:31:31.751] Adding entry into typings cache: 'semver' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/semver/index.d.ts'
+[23:31:31.753] Adding entry into typings cache: 'signal-exit' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/signal-exit/index.d.ts'
+[23:31:31.756] Adding entry into typings cache: 'sprintf' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/sprintf/index.d.ts'
+[23:31:31.758] Adding entry into typings cache: 'sshpk' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/sshpk/index.d.ts'
+[23:31:31.762] Adding entry into typings cache: 'supports-color' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/supports-color/index.d.ts'
+[23:31:31.764] Adding entry into typings cache: 'tapable' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/tapable/tapable.d.ts'
+[23:31:31.767] Adding entry into typings cache: 'testing-library__jest-dom' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/testing-library__jest-dom/index.d.ts'
+[23:31:31.770] Adding entry into typings cache: 'touch' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/touch/index.d.ts'
+[23:31:31.773] Adding entry into typings cache: 'tough-cookie' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/tough-cookie/index.d.ts'
+[23:31:31.775] Adding entry into typings cache: 'tryer' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/tryer/index.d.ts'
+[23:31:31.777] Adding entry into typings cache: 'update-notifier' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/update-notifier/index.d.ts'
+[23:31:31.779] Adding entry into typings cache: 'url-parse-lax' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/url-parse-lax/index.d.ts'
+[23:31:31.781] Adding entry into typings cache: 'uuid' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/uuid/index.d.ts'
+[23:31:31.783] Adding entry into typings cache: 'verror' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/verror/index.d.ts'
+[23:31:31.785] Adding entry into typings cache: 'webpack-sources' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/webpack-sources/index.d.ts'
+[23:31:31.787] Adding entry into typings cache: 'wrap-ansi' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/wrap-ansi/index.d.ts'
+[23:31:31.789] Adding entry into typings cache: 'write-file-atomic' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/write-file-atomic/index.d.ts'
+[23:31:31.791] Adding entry into typings cache: 'yallist' => 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/yallist/index.d.ts'
+[23:31:31.791] Finished processing cache location 'C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4'
+[23:31:31.791] Process id: 13216
+[23:31:31.791] NPM location: "C:\Program Files\nodejs\npm" (explicit '--npmLocation' not  provided)
+[23:31:31.792] validateDefaultNpmLocation: false
+[23:31:31.792] Npm config file: C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/package.json
+[23:31:31.792] Updating types-registry npm package...
+[23:31:31.792] Exec: "C:\Program Files\nodejs\npm" install --ignore-scripts types-registry@latest
+[23:31:34.739]     Succeeded. stdout:
+    + types-registry@0.1.565
+    updated 1 package and audited 155 packages in 1.571s
+
+8 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+
+[23:31:34.739] Updated types-registry npm package
+[23:31:42.762] Got install request {"projectName":"/dev/null/inferredProject1*","fileNames":["f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es5.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2016.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.dom.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.dom.iterable.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.webworker.importscripts.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.scripthost.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.core.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.collection.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.generator.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.iterable.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.promise.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.proxy.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.reflect.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.symbol.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2016.array.include.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2016.full.d.ts","f:/dev/matrix-js-client/src/component/jsxComponents/form.jsx"],"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typeAcquisition":{"enable":true,"include":[],"exclude":[]},"unresolvedImports":[],"projectRootPath":"f:/dev/matrix-js-client/src/component/jsxComponents","kind":"discover"}
+[23:31:42.767] Loaded safelist from types map file 'f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/typesmap.json'
+[23:31:42.768] Explicitly included types: []
+[23:31:42.768] Inferred 'react' typings due to presence of '.jsx' extension
+[23:31:42.769] Inferred typings from unresolved imports: []
+[23:31:42.769] Result: {"cachedTypingPaths":["C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/react/index.d.ts"],"newTypingNames":[],"filesToWatch":["f:/dev/matrix-js-client/src/component/jsxComponents/bower_components","f:/dev/matrix-js-client/src/component/jsxComponents/node_modules"]}
+[23:31:42.769] Finished typings discovery: {"cachedTypingPaths":["C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/react/index.d.ts"],"newTypingNames":[],"filesToWatch":["f:/dev/matrix-js-client/src/component/jsxComponents/bower_components","f:/dev/matrix-js-client/src/component/jsxComponents/node_modules"]}
+[23:31:42.770] DirectoryWatcher:: Added:: WatchInfo: f:/dev/matrix-js-client/src/component/jsxComponents/bower_components
+[23:31:42.770] DirectoryWatcher:: Added:: WatchInfo: f:/dev/matrix-js-client/src/component/jsxComponents/bower_components 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[23:31:42.772] Elapsed:: 1.235300000058487ms DirectoryWatcher:: Added:: WatchInfo: f:/dev/matrix-js-client/src/component/jsxComponents/bower_components 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[23:31:42.772] DirectoryWatcher:: Added:: WatchInfo: f:/dev/matrix-js-client/src/component/jsxComponents/node_modules
+[23:31:42.772] DirectoryWatcher:: Added:: WatchInfo: f:/dev/matrix-js-client/src/component/jsxComponents/node_modules 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[23:31:42.772] Elapsed:: 0.0889000000897795ms DirectoryWatcher:: Added:: WatchInfo: f:/dev/matrix-js-client/src/component/jsxComponents/node_modules 1 undefined Project: /dev/null/inferredProject1* watcher already invoked: false
+[23:31:42.772] Sending response:
+    {"projectName":"/dev/null/inferredProject1*","typeAcquisition":{"enable":true,"include":[],"exclude":[]},"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typings":["C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/react/index.d.ts"],"unresolvedImports":[],"kind":"action::set"}
+[23:31:42.773] Response has been sent.
+[23:31:42.773] No new typings were requested as a result of typings discovery
+[23:31:44.602] Got install request {"projectName":"/dev/null/inferredProject1*","fileNames":["f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es5.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2016.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.dom.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.dom.iterable.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.webworker.importscripts.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.scripthost.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.core.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.collection.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.generator.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.iterable.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.promise.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.proxy.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.reflect.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.symbol.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2016.array.include.d.ts","f:/.emacs.d/.cache/lsp/npm/typescript/node_modules/typescript/lib/lib.es2016.full.d.ts","f:/dev/matrix-js-client/src/component/jsxComponents/form.jsx","C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/react/global.d.ts","C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/react/index.d.ts"],"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typeAcquisition":{"enable":true,"include":[],"exclude":[]},"unresolvedImports":[],"projectRootPath":"f:/dev/matrix-js-client/src/component/jsxComponents","kind":"discover"}
+[23:31:44.603] Explicitly included types: []
+[23:31:44.603] Inferred 'react' typings due to presence of '.jsx' extension
+[23:31:44.603] Inferred typings from unresolved imports: []
+[23:31:44.603] Result: {"cachedTypingPaths":["C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/react/index.d.ts"],"newTypingNames":[],"filesToWatch":["f:/dev/matrix-js-client/src/component/jsxComponents/bower_components","f:/dev/matrix-js-client/src/component/jsxComponents/node_modules"]}
+[23:31:44.604] Finished typings discovery: {"cachedTypingPaths":["C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/react/index.d.ts"],"newTypingNames":[],"filesToWatch":["f:/dev/matrix-js-client/src/component/jsxComponents/bower_components","f:/dev/matrix-js-client/src/component/jsxComponents/node_modules"]}
+[23:31:44.604] Sending response:
+    {"projectName":"/dev/null/inferredProject1*","typeAcquisition":{"enable":true,"include":[],"exclude":[]},"compilerOptions":{"module":1,"target":3,"jsx":1,"allowJs":true,"allowSyntheticDefaultImports":true,"allowNonTsExtensions":true,"noEmitForJsFiles":true,"maxNodeModuleJsDepth":2},"typings":["C:/Users/acer/AppData/Local/Microsoft/TypeScript/4.4/node_modules/@types/react/index.d.ts"],"unresolvedImports":[],"kind":"action::set"}
+[23:31:44.604] Response has been sent.
+[23:31:44.604] No new typings were requested as a result of typings discovery
