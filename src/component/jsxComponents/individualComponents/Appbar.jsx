@@ -2,78 +2,57 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import React, { useState } from "react";
-import { makeStyles } from "@mui/styles";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
-import theme from "./Theme.jsx";
-const useStyles = makeStyles((theme) => ({
-  toobarMargin: {
-    ...theme.mixins.toolbar,
-    marginBottom: "1em",
-  },
-  tabContainerStyle: {
-    marginLeft: "auto",
-  },
-  tabStyle: {
-    fontSize: "0.9rem",
-  },
+import { styled } from "@mui/material/styles";
+
+const TabStyle = styled(Tab)(({ theme }) => ({
+  fontSize: "0.8em",
+  textTransform: "none",
+  fontWeight: 700,
+}));
+const TabContainer = styled(Tabs)(({ theme }) => ({
+  marginLeft: "auto",
+}));
+const PaddedDiv = styled("div")(({ theme }) => ({
+  ...theme.mixins.toolbar,
+  marginBottom: "1.7em",
+}));
+const DisplayName = styled(Typography)(({ theme }) => ({
+  fontFamily: "Montez",
+  fontSize: "1.9em",
+  fontWeight: 600,
 }));
 
-const Appbar = (props) => {
+const Appbar = () => {
   const [value, onChangeValue] = useState("one");
   const changeTab = (e, newValue) => {
     onChangeValue(newValue);
   };
-  const classes = useStyles(theme);
   return (
     <React.Fragment>
-      <AppBar color="appbarColor" elevation={0}>
+      <AppBar
+        sx={{ borderBottom: 1, borderColor: "secondary.main" }}
+        color="appbarColor"
+        elevation={0}
+        disableGutters
+      >
         <Toolbar>
-          <Typography>Ping</Typography>
-          <Tabs
+          <DisplayName>Ping</DisplayName>
+          <TabContainer
             value={value}
             onChange={changeTab}
             textColor="primary"
-            indicatorColor="primary"
-            className={classes.tabContainerStyle}
+            indicatorColor="appbarColor.main"
           >
-            <Tab
-              sx={{
-                textTransform: "none",
-                fontWeight: 900,
-              }}
-              label="Home"
-              value="one"
-            />
-            <Tab
-              sx={{
-                textTransform: "none",
-                fontWeight: 900,
-              }}
-              label="Ping web"
-              value="two"
-            />
-            <Tab
-              sx={{
-                textTransform: "none",
-                fontWeight: 900,
-              }}
-              label="Ping Download"
-              value="three"
-            />
-            <Tab
-              sx={{
-                textTransform: "none",
-                fontWeight: 900,
-              }}
-              className={classes.tabStyle}
-              label="About us"
-              value="four"
-            />
-          </Tabs>
+            <TabStyle label="Home" value="one" />
+            <TabStyle label="Ping web" value="two" />
+            <TabStyle label="Ping Download" value="three" />
+            <TabStyle label="About us" value="four" />
+          </TabContainer>
         </Toolbar>
       </AppBar>
-      <div className={classes.toobarMargin} />
+      <PaddedDiv />
     </React.Fragment>
   );
 };

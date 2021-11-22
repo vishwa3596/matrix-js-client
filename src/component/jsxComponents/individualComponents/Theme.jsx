@@ -1,33 +1,28 @@
 import { createTheme } from "@mui/material/styles";
-const arcBlue = "#9747E6";
-const arcOrange = "#D96E30";
-const cyan = "#72A693";
-const black = "#353537";
-const arcYellow = "#D9A13B";
-const white = "#FFFFFF";
+
+const greenDark = "#43E86B";
+const greenDarkMinus = "#4FF246";
+const greenMatte = "#84DB4B";
+const limeGreen = "#C7F246";
+const yellow = "#E8E343";
+const white = "#FFF";
 const theme = createTheme({
   palette: {
     common: {
-      arcBlue: `${arcBlue}`,
-      arcOrange: `${arcOrange}`,
-      cyan: `${cyan}`,
-      black: `${black}`,
-      arcYellow: `${arcYellow}`,
+      greenDark: `${greenDark}`,
+      greenDarkMinus: `${greenDarkMinus}`,
+      greenMatte: `${greenMatte}`,
+      limeGreen: `${limeGreen}`,
+      yellow: `${yellow}`,
     },
     primary: {
-      main: `${arcBlue}`,
+      main: `${greenDark}`,
     },
     secondary: {
-      main: `${arcYellow}`,
+      main: `${greenDarkMinus}`,
     },
     appbarColor: {
       main: `${white}`,
-    },
-  },
-  typography: {
-    h3: {
-      fontWeight: 200,
-      color: `red`,
     },
   },
 });
