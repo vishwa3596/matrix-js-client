@@ -1,5 +1,6 @@
 import sdk from "matrix-js-sdk";
 import { storage } from "./storage.js";
+import { Event } from "./event.js";
 
 export const createClient = (username, password) => {
   return sdk.createClient(storage.baseUrl);
@@ -22,5 +23,5 @@ export const login = async (username, password) => {
     user: username,
     password: password,
   });
-  return Client;
+  await Event(loginResponse);
 };

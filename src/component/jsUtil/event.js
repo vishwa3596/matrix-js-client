@@ -5,7 +5,8 @@
 
 import { storage } from "./storage.js";
 import { login } from "./login.js";
-import { createClient } from "matrix-js-sdk";
+import { IndexedDBStore, MatrixClient } from "matrix-js-sdk";
+import sdk from "matrix-js-sdk";
 
 /**
                                          +---->STOPPED
@@ -26,7 +27,7 @@ import { createClient } from "matrix-js-sdk";
  *createClient() -> accept option to create a MatrixClient instance.
  * startClient() -> High level helper method to begin syncing and poll for new events. To listen for these events, add a listener for module:client~MatrixClient#event:"event" via module:client~MatrixClient#on. Alternatively, listen for specific state change events
   * */
-const clientSync = (client) => {
+export const clientSync = (client) => {
   client.once("sync", (state, prevState, data) => {
     console.log(" inside sync");
     switch (state) {
@@ -38,8 +39,6 @@ const clientSync = (client) => {
         break;
       case "PREPARED":
         console.log(" IN PREPARED STATE OF SYNCING ");
-        let rooms = client.getRooms();
-        console.log(rooms);
         break;
       default:
         break;
@@ -47,10 +46,19 @@ const clientSync = (client) => {
   });
 };
 
-const Event = async () => {
-  const responseFromLogin = await login(storage.userName, storage.password);
-  clientSync(responseFromLogin);
-  responseFromLogin.startClient();
+export const Event = async (responseFromLogin) => {
+  let store = new IndexedDBStore({
+    indexedDB: window.indexedDB,
+  });
+  await store.startup();
+  const client = sdk.createClient({
+    accessToken: responseFromLogin.access_token,
+    userId: responseFromLogin.user_id,
+    deviceId: responseFromLogin.device_id,
+    baseUrl: responseFromLogin.well_known["m.homeserver"].base_url,
+    store: store,
+  });
+  client.startClient();
+  console.log(responseFromLogin);
+  clientSync(client);
 };
-
-Event();

@@ -4,8 +4,7 @@ import Box from "@mui/material/Box";
 
 const CreateNewClient = () => {
   const loginInfo = async (username, password) => {
-    const val = await login(username, password);
-    console.log(val);
+    await login(username, password);
   };
 
   return (
