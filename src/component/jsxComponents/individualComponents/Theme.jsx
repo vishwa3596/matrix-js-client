@@ -1,25 +1,25 @@
 import { createTheme } from "@mui/material/styles";
 
-const greenDark = "#43E86B";
-const greenDarkMinus = "#4FF246";
-const greenMatte = "#84DB4B";
-const limeGreen = "#C7F246";
-const yellow = "#E8E343";
+const blueA = "#5F95F5";
+const blueB = "#63C4FF";
+const blueC = "#66D9E8";
+const greenA = "#63FFE6";
+const greenB = "#5FF5B3";
 const white = "#FFF";
 const theme = createTheme({
   palette: {
     common: {
-      greenDark: `${greenDark}`,
-      greenDarkMinus: `${greenDarkMinus}`,
-      greenMatte: `${greenMatte}`,
-      limeGreen: `${limeGreen}`,
-      yellow: `${yellow}`,
+      blueA: `${blueA}`,
+      blueB: `${blueB}`,
+      blueC: `${blueC}`,
+      greenA: `${greenA}`,
+      greenB: `${greenB}`,
     },
     primary: {
-      main: `${greenDark}`,
+      main: `${blueA}`,
     },
     secondary: {
-      main: `${greenDarkMinus}`,
+      main: `${blueB}`,
     },
     appbarColor: {
       main: `${white}`,

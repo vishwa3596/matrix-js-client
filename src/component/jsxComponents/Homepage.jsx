@@ -1,11 +1,10 @@
-import CreateNewClient from "./CreateNewClient";
 import Appbar from "./individualComponents/Appbar.jsx";
 
 const Homepage = () => {
+  console.log("Homepage is loaded");
   return (
     <div>
       <Appbar />
-      <CreateNewClient />
     </div>
   );
 };
