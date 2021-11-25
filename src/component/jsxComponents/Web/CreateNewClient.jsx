@@ -1,4 +1,4 @@
-import { login } from "../jsUtil/login";
+import { login } from "../jsUtil/login.js";
 import RegistrationForm from "./form";
 import Box from "@mui/material/Box";
 
@@ -8,13 +8,7 @@ const CreateNewClient = () => {
   };
 
   return (
-    <Box
-      sx={{
-        display: "grid",
-        gridTemplateColumns: "repeat(2, 1fr)",
-      }}
-    >
-      <h1> ping </h1>
+    <Box>
       <RegistrationForm onSavingData={loginInfo} />
     </Box>
   );

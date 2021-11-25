@@ -9,20 +9,28 @@ const DisplayName = styled(Typography)(({ theme }) => ({
   fontWeight: 600,
   alingSelf: "center",
 }));
+const PaddedDiv = styled("div")(({ theme }) => ({
+  ...theme.mixins.toolbar,
+  marginBottom: "3rem",
+}));
+
 const Webappbar = () => {
   return (
-    <Appbar
-      elevation={0}
-      color="appbarColor"
-      sx={{
-        flexGrow: 1,
-        alignItems: "center",
-      }}
-    >
-      <Toolbar>
-        <DisplayName color="primary"> Ping </DisplayName>
-      </Toolbar>
-    </Appbar>
+    <>
+      <Appbar
+        elevation={0}
+        color="appbarColor"
+        sx={{
+          flexGrow: 1,
+          alignItems: "center",
+        }}
+      >
+        <Toolbar>
+          <DisplayName color="primary"> Ping </DisplayName>
+        </Toolbar>
+      </Appbar>
+      <PaddedDiv />
+    </>
   );
 };
 

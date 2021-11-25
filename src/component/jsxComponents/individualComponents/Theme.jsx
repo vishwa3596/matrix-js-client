@@ -24,6 +24,9 @@ const theme = createTheme({
     appbarColor: {
       main: `${white}`,
     },
+    lightText: {
+      main: `${blueC}`,
+    },
   },
 });
 
