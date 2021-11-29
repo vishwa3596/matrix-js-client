@@ -1,7 +1,7 @@
 import "./App.css";
 import { ThemeProvider } from "@mui/material";
-import theme from "./component/jsxComponents/individualComponents/Theme";
-import Pingweb from "./component/jsxComponents/Web/main.jsx";
+import theme from "./component/individualComponents/Theme";
+import Pingweb from "./component/Web/main";
 
 function App() {
   console.log("app is loaded");

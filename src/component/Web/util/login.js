@@ -1,6 +1,5 @@
 import sdk from "matrix-js-sdk";
 import { storage } from "./storage.js";
-import { Event } from "./event.js";
 
 export const createClient = (username, password) => {
   return sdk.createClient(storage.baseUrl);
@@ -23,5 +22,14 @@ export const login = async (username, password) => {
     user: username,
     password: password,
   });
-  await Event(loginResponse);
+  const storage = window.localStorage;
+  storage.setItem("user_id", loginResponse.user_id);
+  storage.setItem("isAccessToken", "yes");
+  storage.setItem(
+    "base_url",
+    loginResponse.well_known["m.homeserver"].base_url
+  );
+  storage.setItem("device_id", loginResponse.device_id);
+  storage.setItem("access_token", loginResponse.access_token);
+  return loginResponse;
 };

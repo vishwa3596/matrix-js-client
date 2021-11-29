@@ -3,9 +3,7 @@
  *
  * */
 
-import { storage } from "./storage.js";
-import { login } from "./login.js";
-import { IndexedDBStore, MatrixClient } from "matrix-js-sdk";
+import { IndexedDBStore } from "matrix-js-sdk";
 import sdk from "matrix-js-sdk";
 
 /**
@@ -32,13 +30,15 @@ export const clientSync = (client) => {
     console.log(" inside sync");
     switch (state) {
       case "ERROR":
-        console.log("in error update the ui about the errors ");
+        console.log(" update ui about Error ");
         break;
       case "SYNCING":
         console.log(" in syncing update the ui ");
         break;
       case "PREPARED":
         console.log(" IN PREPARED STATE OF SYNCING ");
+        let room = client.getRooms();
+        console.log(room);
         break;
       default:
         break;
@@ -47,18 +47,24 @@ export const clientSync = (client) => {
 };
 
 export const Event = async (responseFromLogin) => {
+  console.log(responseFromLogin);
   let store = new IndexedDBStore({
     indexedDB: window.indexedDB,
   });
   await store.startup();
   const client = sdk.createClient({
-    accessToken: responseFromLogin.access_token,
-    userId: responseFromLogin.user_id,
-    deviceId: responseFromLogin.device_id,
-    baseUrl: responseFromLogin.well_known["m.homeserver"].base_url,
+    accessToken: responseFromLogin.accessToken,
+    userId: responseFromLogin.userId,
+    deviceId: responseFromLogin.deviceId,
+    baseUrl: responseFromLogin.baseUrl,
     store: store,
   });
-  client.startClient();
-  console.log(responseFromLogin);
+  client.on("Room", (room) => {
+    let roomId = room.roomId;
+    console.log("in the room event, ", roomId);
+  });
   clientSync(client);
+  client.startClient();
 };
+
+// when the main.jsx is loading the page need to verify that the localstorage have data for the user obvio it is not accesiable so we can't fetch it for ourselves but I need to find that method.
