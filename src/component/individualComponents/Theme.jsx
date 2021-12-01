@@ -6,6 +6,8 @@ const blueC = "#66D9E8";
 const greenA = "#63FFE6";
 const greenB = "#5FF5B3";
 const white = "#FFF";
+const border = "#F2EEEE";
+
 const theme = createTheme({
   palette: {
     common: {
@@ -26,6 +28,12 @@ const theme = createTheme({
     },
     lightText: {
       main: `${blueC}`,
+    },
+    chatWindow: {
+      main: `${blueC}`,
+    },
+    gray: {
+      main: `${border}`,
     },
   },
 });

@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
+import { Fragment } from "react";
 import CreateNewClient from "./CreateNewClient";
 import DashBoard from "./DashBoard";
+import Leftpane from "./childComponent/Dashboardbar.jsx";
+import { CssBaseline } from "@mui/material";
+import Grid from "@mui/material/Grid";
+import ChatArea from "./ChatArea";
 
 const Main = () => {
   const [userInformation, setUserInformation] = useState({
@@ -42,12 +47,18 @@ const Main = () => {
   };
   return (
     <>
+      <ChatArea />
+    </>
+  );
+};
+export default Main;
+/**
+ *
       {userInformation.isLoggedin === true ? (
         <DashBoard userInformation={userInformation.Information} />
       ) : (
         <CreateNewClient userData={loggedUserInfo} />
       )}
-    </>
-  );
-};
-export default Main;
+ *
+ *
+ * */
