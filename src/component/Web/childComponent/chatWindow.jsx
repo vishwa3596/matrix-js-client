@@ -21,7 +21,7 @@ const ChatWindow = () => {
           item
           sx={{
             borderBottom: 1,
-            borderColor: "gray.main",
+            borderColor: "lineColor.main",
           }}
         >
           <Toolbar
@@ -43,9 +43,23 @@ const ChatWindow = () => {
               onChange={handleChange}
               aria-label="icon tabs example"
             >
-              <Tab icon={<PhoneIcon />} aria-label="phone" />
-              <Tab icon={<SearchIcon />} aria-label="search" />
-              <Tab icon={<MoreVertIcon />} aria-label="more" />
+              <Tab
+                sx={{ minWidth: 50 }}
+                icon={<SearchIcon />}
+                aria-label="search"
+              />
+              <Tab
+                sx={{
+                  minWidth: 50,
+                }}
+                icon={<PhoneIcon />}
+                aria-label="phone"
+              />
+              <Tab
+                sx={{ minWidth: 50 }}
+                icon={<MoreVertIcon />}
+                aria-label="more"
+              />
             </Tabs>
           </Toolbar>
         </Grid>

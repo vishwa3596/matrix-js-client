@@ -32,7 +32,7 @@ const theme = createTheme({
     chatWindow: {
       main: `${blueC}`,
     },
-    gray: {
+    lineColor: {
       main: `${border}`,
     },
   },
