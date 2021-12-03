@@ -10,4 +10,3 @@ const SocialBox = () => {
 };
 
 export default SocialBox;
-

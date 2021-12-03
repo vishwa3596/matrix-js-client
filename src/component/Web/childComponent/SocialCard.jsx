@@ -1,7 +1,19 @@
 import { Fragment } from "react";
-import Grid from "@mui/material/Grid";
 import { Box } from "@mui/system";
+import { Typography } from "@mui/material";
+import { styled } from "@mui/system";
+import PersonIcon from "@mui/icons-material/Person";
 
+import { Toolbar } from "@mui/material";
+const ChatName = styled(Typography)(({ theme }) => ({
+  fontSize: "0.9rem",
+}));
+const LastChat = styled(Typography)(({ theme }) => ({
+  fontSize: "0.7rem",
+}));
+/**
+ * 2 component inside the box will be there like
+ * */
 const SocialCard = () => {
   const handleClick = () => {
     alert("this is me");
@@ -16,33 +28,7 @@ const SocialCard = () => {
         }}
         onClick={handleClick}
       >
-        <Grid container direction="row">
-          <Grid item xs={4}>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                paddingLeft: "1rem",
-                height: 75,
-                alignItems: "center",
-              }}
-            >
-              image
-            </Box>
-          </Grid>
-          <Grid item xs={8}>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                height: 75,
-                alignItems: "center",
-              }}
-            >
-              chatName
-            </Box>
-          </Grid>
-        </Grid>
+        <Toolbar></Toolbar>
       </Box>
     </Fragment>
   );

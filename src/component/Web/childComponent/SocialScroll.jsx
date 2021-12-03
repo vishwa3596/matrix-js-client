@@ -1,8 +1,9 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import SocialCard from "./SocialCard";
-import { List } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import { Scrollbars } from "react-custom-scrollbars";
+import { alpha } from "@mui/system";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,11 +15,25 @@ const useStyles = makeStyles((theme) => ({
     },
     "&::-webkit-scrollbar-thumb": {
       backgroundColor: "darkgrey",
-      outline: `1px solid slategrey`,
+      outline: `0.8px solid slategrey`,
     },
   },
 }));
+const renderThumb = ({ style, ...props }) => {
+  const thumbStyle = {
+    borderRadius: 6,
+    backgroundColor: "#AEAEAE",
+  };
+  return <div style={{ ...style, ...thumbStyle }} {...props} />;
+};
 
+const CustomScrollbars = (props) => (
+  <Scrollbars
+    renderThumbHorizontal={renderThumb}
+    renderThumbVertical={renderThumb}
+    {...props}
+  />
+);
 const SocialScroll = () => {
   const classes = useStyles();
   return (
@@ -29,13 +44,7 @@ const SocialScroll = () => {
         height: "93vh",
       }}
     >
-      <List
-        sx={{
-          height: "100%",
-          overflow: "auto",
-        }}
-        disablePadding
-      >
+      <CustomScrollbars autoHide autoHideTimeout={500} autoHideDuration={200}>
         <SocialCard />
         <SocialCard />
         <SocialCard />
@@ -51,7 +60,7 @@ const SocialScroll = () => {
         <SocialCard />
         <SocialCard />
         <SocialCard />
-      </List>
+      </CustomScrollbars>
     </Box>
   );
 };
