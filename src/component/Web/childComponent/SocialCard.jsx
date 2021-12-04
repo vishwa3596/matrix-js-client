@@ -1,36 +1,48 @@
-import { Fragment } from "react";
-import { Box } from "@mui/system";
-import { Typography } from "@mui/material";
-import { styled } from "@mui/system";
-import PersonIcon from "@mui/icons-material/Person";
+import React from "react";
+import Card from "@mui/material/Card";
+import { Avatar, Box, CardHeader, CardMedia, Typography } from "@mui/material";
+import { red } from "@mui/material/colors";
 
-import { Toolbar } from "@mui/material";
-const ChatName = styled(Typography)(({ theme }) => ({
-  fontSize: "0.9rem",
-}));
-const LastChat = styled(Typography)(({ theme }) => ({
-  fontSize: "0.7rem",
-}));
-/**
- * 2 component inside the box will be there like
- * */
 const SocialCard = () => {
-  const handleClick = () => {
-    alert("this is me");
-  };
-
   return (
-    <Fragment>
-      <Box
-        sx={{
-          "&:hover": { backgroundColor: "#F2EEEE", borderRadius: "5px" },
-          cursor: "pointer",
-        }}
-        onClick={handleClick}
-      >
-        <Toolbar></Toolbar>
-      </Box>
-    </Fragment>
+    <Card
+      sx={{
+        width: "100%",
+        height: 75,
+      }}
+    >
+      <CardHeader
+        avatar={
+          <Avatar sx={{ bgcolor: "#5F95F5" }} aria-label="profile">
+            {" "}
+            N{" "}
+          </Avatar>
+        }
+        title="ChatName"
+        subheader="this is the chat .. "
+        action={
+          <Box>
+            <Typography
+              sx={{
+                fontSize: "0.875rem",
+              }}
+            >
+              {" "}
+              wed{" "}
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: "0.8rem",
+                textAlign: "Center",
+              }}
+            >
+              {" "}
+              2{" "}
+            </Typography>
+          </Box>
+        }
+      />
+    </Card>
   );
 };
 
