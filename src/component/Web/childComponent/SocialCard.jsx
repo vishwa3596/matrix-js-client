@@ -21,6 +21,10 @@ const SocialCard = () => {
           display: "grid",
           justifyContent: "space-between",
         },
+        "&:hover": {
+          backgroundColor: "#F2EEEE",
+          cursor: "pointer",
+        },
       }}
     >
       <CardHeader
