@@ -21,13 +21,20 @@ const Search = styled("div")(({ theme }) => ({
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  border: 1,
   color: "inherit",
   width: "100%",
+  backgroundColor: alpha(theme.palette.lineColor.main, 0.5),
+  borderRadius: "10px",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+  },
+  "&:hover": {
+    backgroundColor: alpha(theme.palette.lineColor.main, 0.8),
+  },
+  "&:after": {
+    backgroundColor: "#FFF",
   },
 }));
 
@@ -65,12 +72,7 @@ const socialWindow = (props) => {
               >
                 <MenuIcon />
               </IconButton>
-              <Search onClick={handleSearchClick}>
-                <StyledInputBase
-                  placeholder="Search"
-                  inputProps={{ "aria-label": "search" }}
-                />
-              </Search>
+              <StyledInputBase placeholder="search" />
             </Toolbar>
           </AppBar>
         </Grid>

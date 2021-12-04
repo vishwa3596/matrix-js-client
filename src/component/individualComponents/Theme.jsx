@@ -35,6 +35,9 @@ const theme = createTheme({
     lineColor: {
       main: `${border}`,
     },
+    textColor: {
+      main: "#AEAEAE",
+    },
   },
 });
 

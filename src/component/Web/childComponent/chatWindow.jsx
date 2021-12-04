@@ -35,15 +35,29 @@ const ChatWindow = () => {
               justifyContent: "space-between",
             }}
           >
-            <Typography
-              sx={{
-                textTransform: "none",
-                fontWeight: 500,
-                marginLeft: "2rem",
-              }}
-            >
-              name
-            </Typography>
+            <Grid container direction="column">
+              <Typography
+                sx={{
+                  fontSize: "17.5px",
+                  textTransform: "none",
+                  fontWeight: 700,
+                  marginLeft: "2rem",
+                }}
+              >
+                Name
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: "17px",
+                  textTransform: "none",
+                  fontWeight: 200,
+                  marginLeft: "2rem",
+                  color: "#AEAEAE",
+                }}
+              >
+                last seen 5m ago
+              </Typography>
+            </Grid>
             <Tabs
               value={value}
               onChange={handleChange}
