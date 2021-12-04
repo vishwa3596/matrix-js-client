@@ -8,6 +8,7 @@ import Tab from "@mui/material/Tab";
 import PhoneIcon from "@mui/icons-material/Phone";
 import SearchIcon from "@mui/icons-material/Search";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import MsgField from "./MsgField";
 const ChatWindow = () => {
   const [value, setValue] = React.useState(0);
 
@@ -16,7 +17,12 @@ const ChatWindow = () => {
   };
   return (
     <Fragment>
-      <Grid container direction="column">
+      <Grid
+        container
+        direction="column"
+        justifyContent="space-between"
+        sx={{ height: "100%" }}
+      >
         <Grid
           item
           sx={{
@@ -62,6 +68,9 @@ const ChatWindow = () => {
               />
             </Tabs>
           </Toolbar>
+        </Grid>
+        <Grid item sx={{ marginTop: "auto" }}>
+          <MsgField />
         </Grid>
       </Grid>
     </Fragment>
