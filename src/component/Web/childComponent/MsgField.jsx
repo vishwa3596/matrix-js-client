@@ -23,13 +23,15 @@ const MsgField = () => {
     <Fragment>
       <Grid container direction="row" justifyContent="center">
         <Paper
-          elevation={0}
+          elevation={1}
           component="form"
           sx={{
             p: "2px 4px",
             display: "flex",
             alignItems: "center",
-            width: "50%",
+            width: "60%",
+            borderRadius: "10px",
+            marginBottom: "10px",
           }}
         >
           <IconButton sx={{ p: "10px" }} aria-label="attach">
