@@ -5,13 +5,13 @@ import {styled} from "@mui/styles";
 import {alpha} from "@mui/system";
 
 const ProfileName = styled(Typography)(({theme}) => ({
-    fontSize: "17.5px",
-    fontWeight: "700",
+    fontSize: "16px",
+    fontWeight: "500",
     color: alpha("#000", 0.8)
 }))
 
 const ProfileInfo = styled(Typography)(({theme}) => ({
-    fontSize: "17.5px",
+    fontSize: "14px",
     fontWeight: "100",
     color: alpha(theme.palette.textColor.main, 1)
 }))

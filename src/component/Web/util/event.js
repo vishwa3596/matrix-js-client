@@ -31,7 +31,7 @@ export const clientSync = (client, setUserSyncState) => {
     switch (state) {
       case "ERROR":
 				setUserSyncState("ERROR");
-        console.log(" update ui about Error ");
+        console.log("ERROR")
         break;
       case "SYNCING":
         console.log(" in syncing update the ui ");

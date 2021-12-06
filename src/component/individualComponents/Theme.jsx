@@ -36,7 +36,7 @@ const theme = createTheme({
       main: `${border}`,
     },
     textColor: {
-      main: "#AEAEAE",
+      main: "#707579",
     },
   },
 });

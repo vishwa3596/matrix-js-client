@@ -72,7 +72,9 @@ const socialWindow = (props) => {
               >
                 <MenuIcon />
               </IconButton>
-              <StyledInputBase placeholder="search" />
+              <Search>
+                <StyledInputBase placeholder="search" />
+              </Search>
             </Toolbar>
           </AppBar>
         </Grid>

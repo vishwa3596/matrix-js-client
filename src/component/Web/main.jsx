@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
-import { Fragment } from "react";
 import CreateNewClient from "./CreateNewClient";
 import DashBoard from "./DashBoard";
-import Leftpane from "./childComponent/Dashboardbar.jsx";
-import { CssBaseline } from "@mui/material";
-import Grid from "@mui/material/Grid";
-import ChatArea from "./ChatArea";
+
 import Spinner from "./childComponent/Spinner.jsx";
+import ChatArea from "./ChatArea";
 
 const Main = () => {
   const [userInformation, setUserInformation] = useState({
@@ -53,12 +50,13 @@ const Main = () => {
   };
   return (
     <>
-			{(userInformation.isLoggedin === null) ? <Spinner /> :
-				( (userInformation.isLoggedin === true) ?
-					<DashBoard userInformation={userInformation.Information} /> :
-					<CreateNewClient userData={loggedUserInfo} />
-				)
-			}
+        <ChatArea />
+		{/*	{(userInformation.isLoggedin === null) ? <Spinner /> :*/}
+		{/*		( (userInformation.isLoggedin === true) ?*/}
+		{/*			<DashBoard userInformation={userInformation.Information} /> :*/}
+		{/*			<CreateNewClient userData={loggedUserInfo} />*/}
+		{/*		)*/}
+		{/*	}*/}
     </>
   );
 };
