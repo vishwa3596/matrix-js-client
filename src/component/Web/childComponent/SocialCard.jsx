@@ -3,22 +3,26 @@ import {Avatar, Box, Typography} from "@mui/material";
 import React from "react";
 import {styled} from "@mui/styles";
 import {alpha} from "@mui/system";
+
 const ProfileName = styled(Typography)(({theme}) => ({
     fontSize: "17.5px",
     fontWeight: "700",
     color: alpha("#000", 0.8)
 }))
+
 const ProfileInfo = styled(Typography)(({theme}) => ({
     fontSize: "17.5px",
     fontWeight: "100",
     color: alpha(theme.palette.textColor.main, 1)
 }))
+
 const LastSeen = styled(Typography)(({theme}) => ({
     fontSize: "0.7rem",
     fontWeight: "100",
     color: alpha(theme.palette.textColor.main, 1),
     textAlign: "center"
 }))
+
 const MsgCount = styled(Typography)(({theme}) => ({
     width: "20px",
     lineHeight: "20px",
@@ -29,9 +33,15 @@ const MsgCount = styled(Typography)(({theme}) => ({
     fontWeight: "100",
     color: "#FFF"
 }))
+
 const ProfileCard = () => {
     return(
-        <Box>
+        <Box sx={{
+            "&:hover":{
+                backgroundColor: "lineColor.main",
+                cursor: "pointer"
+            }
+        }}>
         <Grid container direction="row" justifyContent="flex-start" alignItems="center" sx={{
             width: "100%"
         }}>
