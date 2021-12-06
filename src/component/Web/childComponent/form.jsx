@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import IconButton from "@mui/material/IconButton";
 import InputAdornment from "@mui/material/InputAdornment";
 import Visibility from "@mui/icons-material/Visibility";
@@ -6,6 +7,7 @@ import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import { TextField } from "@mui/material";
+
 import "./form.css";
 
 const RegistrationForm = (props) => {

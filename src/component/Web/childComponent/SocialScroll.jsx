@@ -1,9 +1,11 @@
 import * as React from "react";
+
 import Box from "@mui/material/Box";
-import SocialCard from "./SocialCard";
 import { makeStyles } from "@mui/styles";
 import { Scrollbars } from "react-custom-scrollbars";
 import { alpha } from "@mui/system";
+
+import SocialCard from "./SocialCard";
 
 const useStyles = makeStyles((theme) => ({
   root: {

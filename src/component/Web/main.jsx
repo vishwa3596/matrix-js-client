@@ -6,11 +6,12 @@ import Leftpane from "./childComponent/Dashboardbar.jsx";
 import { CssBaseline } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import ChatArea from "./ChatArea";
+import Spinner from "./childComponent/Spinner.jsx";
 
 const Main = () => {
   const [userInformation, setUserInformation] = useState({
-    isLoggedin: false,
-    Information: {},
+    isLoggedin: null,
+    Information: null,
   });
   useEffect(() => {
     console.log("uin");
@@ -25,13 +26,18 @@ const Main = () => {
       };
       setUserInformation((prevState) => ({
         ...prevState,
-        isLoggedin: true,
         Information: {
           ...prevState.Information,
           ...userInfo,
         },
+        isLoggedin: true,
       }));
-    }
+    } else {
+			setUserInformation((prevState) => ({
+				...prevState,
+				isLoggedin: false,
+			}));
+		}
   }, []);
   const loggedUserInfo = (status, userInfo) => {
     console.log(status, userInfo);
@@ -47,13 +53,25 @@ const Main = () => {
   };
   return (
     <>
-      <ChatArea />
+			{(userInformation.isLoggedin === null) ? <Spinner /> :
+				( (userInformation.isLoggedin === true) ?
+					<DashBoard userInformation={userInformation.Information} /> :
+					<CreateNewClient userData={loggedUserInfo} />
+				)
+			}
     </>
   );
 };
 export default Main;
 /**
  *
+			{(userInformation.isLoggedin === null) ? <Spinner /> :
+				( (userInformation.isLoggedin === true) ?
+					<DashBoard userInformation={userInformation.Information} /> :
+					<CreateNewClient userData={loggedUserInfo} />
+				)
+			}
+
       {userInformation.isLoggedin === true ? (
         <DashBoard userInformation={userInformation.Information} />
       ) : (
