@@ -1,12 +1,21 @@
+import React,{useState} from "react";
+
 import { Event } from "./util/event";
-import React from "react";
 import ChatArea from "./ChatArea";
+import Spinner from "./childComponent/Spinner.jsx";
+
 const DashBoard = (props) => {
+
+	// handle the error
+	const [userSyncState, setUserSyncState] = useState("SYNCING");
   const userInformation = props.userInformation;
   console.log(userInformation);
-  Event(userInformation);
+
+  Event(userInformation, setUserSyncState);
+
+
   return <React.Fragment>
-    <ChatArea />
+		{ userSyncState === "SYNCING" ? <Spinner /> : <ChatArea /> }
   </React.Fragment>;
 };
 
