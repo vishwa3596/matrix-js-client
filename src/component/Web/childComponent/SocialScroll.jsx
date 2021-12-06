@@ -48,20 +48,6 @@ const SocialScroll = () => {
     >
       <CustomScrollbars autoHide autoHideTimeout={500} autoHideDuration={200}>
         <SocialCard />
-        <SocialCard />
-        <SocialCard />
-        <SocialCard />
-        <SocialCard />
-        <SocialCard />
-        <SocialCard />
-        <SocialCard />
-        <SocialCard />
-        <SocialCard />
-        <SocialCard />
-        <SocialCard />
-        <SocialCard />
-        <SocialCard />
-        <SocialCard />
       </CustomScrollbars>
     </Box>
   );

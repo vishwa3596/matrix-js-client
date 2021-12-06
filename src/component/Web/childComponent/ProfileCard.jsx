@@ -15,14 +15,16 @@ const ProfileInfo = styled(Typography)(({theme}) => ({
 }))
 const ProfileCard = () => {
     return(
-        <Grid container direction="row" justifyContent="center" alignItems="center">
-            <Grid item xs={1}>
-                <Avatar sx={{ bgcolor: "#5F95F5", marginLeft: "5px" }} aria-label="profile">
-                    {" "}
-                    N{" "}
+        <Grid container direction="row" justifyContent="flex-start" alignItems="center">
+            <Grid item>
+                <Avatar sx={{ bgcolor: "#5F95F5", marginLeft: "auto", marginRight: "auto"}} aria-label="profile">
+                    N
                 </Avatar>
             </Grid>
-            <Grid item xs={11}>
+            <Grid item sx={{
+                marginLeft: "5px",
+                paddingLeft: "5px"
+            }}>
                 <Grid container direction="column">
                     <ProfileName>Name</ProfileName>
                     <ProfileInfo>Last Seen 5 m ago</ProfileInfo>
