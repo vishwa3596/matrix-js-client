@@ -20,13 +20,15 @@ const ChatWindow = () => {
         container
         direction="column"
         justifyContent="space-between"
-        sx={{ height: "100%" }}
+        sx={{ height: "100%",  borderLeft: 1,
+            borderColor: "lineColor.main", }}
       >
         <Toolbar
           item
           sx={{
             borderBottom: 1,
-            borderColor: "lineColor.main",
+              borderColor: "lineColor.main"
+
           }}
         >
               <ProfileCard />

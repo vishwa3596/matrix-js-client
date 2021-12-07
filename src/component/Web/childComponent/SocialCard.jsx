@@ -1,5 +1,5 @@
 import Grid from "@mui/material/Grid";
-import {Avatar, Box, Typography} from "@mui/material";
+import {Avatar, Box, Paper, Toolbar, Typography} from "@mui/material";
 import React from "react";
 import {styled} from "@mui/styles";
 import {alpha} from "@mui/system";
@@ -24,60 +24,55 @@ const LastSeen = styled(Typography)(({theme}) => ({
 }))
 
 const MsgCount = styled(Typography)(({theme}) => ({
-    width: "20px",
-    lineHeight: "20px",
-    borderRadius: "50%",
-    textAlign: "center",
-    fontSize: "12px",
-    backgroundColor: "#5F95F5",
-    fontWeight: "100",
-    color: "#FFF"
+    fontSize: "0.7rem",
+    fontWeight: "900",
+    color: alpha(theme.palette.common.blueA, 1),
+    textAlign: "center"
 }))
 
 const ProfileCard = () => {
     return(
         <Box sx={{
             "&:hover":{
-                backgroundColor: "lineColor.main",
-                cursor: "pointer"
+                cursor: "pointer",
+                backgroundColor: "#F2EEEE"
             }
         }}>
-        <Grid container direction="row" justifyContent="flex-start" alignItems="center" sx={{
-            width: "100%"
-        }}>
-            <Grid item sx={{
-                width: "auto",
-                paddingLeft: "24px"
+            <Toolbar sx={{
+                justifyItems: "center",
+                width: "100%",
+                "&:hover":{
+                    cursor: "pointer",
+                    backgroundColor: "#F2EEEE"
+                }
             }}>
-                <Avatar sx={{ bgcolor: "#5F95F5", marginLeft: "auto", marginRight: "auto"}} aria-label="profile">
-                    N
-                </Avatar>
-            </Grid>
-            <Grid item xs={true} sx={{
-                paddingLeft: "13px",
-                paddingRight: "10px"
-            }}>
-            <Grid container="row" justifyContent="space-between">
-                <Grid item>
-                    <Grid container direction="column">
-                        <ProfileName>Name</ProfileName>
-                        <ProfileInfo>This is the Chat ...</ProfileInfo>
-                    </Grid>
-                </Grid>
-                <Grid item>
-                    <Grid continer direction="column" justifyContent="space-between">
-                        <Grid item>
+                <Paper elevation={0} sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: "100%" , "&:hover": {
+                        borderColor: "lineColor.main",
+                    }}}>
+                    <Avatar sx={{ bgcolor: "#5F95F5", p: '12px'}} aria-label="profile">
+                        N
+                    </Avatar>
+                    <Grid container direction="row" sx={{ ml: 1, flex: 1 }} alignItems="center">
+                        <Grid item xs={10}>
+                            <ProfileName>Name</ProfileName>
+                        </Grid>
+                        <Grid item xs={2}>
                             <LastSeen>wed</LastSeen>
                         </Grid>
-                        <Grid item >
-                            <MsgCount textAlign="center">20</MsgCount>
+                        <Grid item xs={10}>
+                            <ProfileInfo>This is chat...</ProfileInfo>
+                        </Grid>
+                        <Grid item xs={2} sx={{
+                            justifyContent: "center"
+                        }}>
+                            <MsgCount >100</MsgCount>
                         </Grid>
                     </Grid>
-                </Grid>
-            </Grid>
-            </Grid>
-            </Grid>
+                </Paper>
+
+            </Toolbar>
         </Box>
+
     )
 }
 export default ProfileCard;

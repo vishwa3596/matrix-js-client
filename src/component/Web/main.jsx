@@ -11,7 +11,6 @@ const Main = () => {
     Information: null,
   });
   useEffect(() => {
-    console.log("uin");
     const localStorage = window.localStorage;
     const flag = localStorage.getItem("isAccessToken");
     if (flag) {
@@ -50,6 +49,7 @@ const Main = () => {
   };
   return (
     <>
+        {/*<ChatArea />*/}
 			{(userInformation.isLoggedin === null) ? <Spinner /> :
 				( (userInformation.isLoggedin === true) ?
 					<DashBoard userInformation={userInformation.Information} /> :

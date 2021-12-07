@@ -25,19 +25,17 @@ import sdk from "matrix-js-sdk";
  *createClient() -> accept option to create a MatrixClient instance.
  * startClient() -> High level helper method to begin syncing and poll for new events. To listen for these events, add a listener for module:client~MatrixClient#event:"event" via module:client~MatrixClient#on. Alternatively, listen for specific state change events
   * */
-export const clientSync = (client, setUserSyncState) => {
+export const clientSync = (client) => {
   client.once("sync", (state, prevState, data) => {
     console.log(" inside sync");
     switch (state) {
       case "ERROR":
-				setUserSyncState("ERROR");
         console.log("ERROR")
         break;
       case "SYNCING":
         console.log(" in syncing update the ui ");
         break;
       case "PREPARED":
-				setUserSyncState("PREPARED");
         console.log(" IN PREPARED STATE OF SYNCING ");
         let room = client.getRooms();
         console.log(room);
@@ -48,7 +46,7 @@ export const clientSync = (client, setUserSyncState) => {
   });
 };
 
-export const Event = async (responseFromLogin, setUserSyncState) => {
+export const Event = async (responseFromLogin) => {
   console.log(responseFromLogin);
   let store = new IndexedDBStore({
     indexedDB: window.indexedDB,
@@ -65,7 +63,7 @@ export const Event = async (responseFromLogin, setUserSyncState) => {
     let roomId = room.roomId;
     console.log("in the room event, ", roomId);
   });
-  clientSync(client, setUserSyncState);
+  clientSync(client);
   client.startClient();
 
 	console.log("SYNC DONE");
