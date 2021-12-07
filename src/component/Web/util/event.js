@@ -67,6 +67,8 @@ export const Event = async (responseFromLogin, setUserSyncState) => {
   });
   clientSync(client, setUserSyncState);
   client.startClient();
+
+	console.log("SYNC DONE");
 };
 
 // when the main.jsx is loading the page need to verify that the localstorage have data for the user obvio it is not accesiable so we can't fetch it for ourselves but I need to find that method.

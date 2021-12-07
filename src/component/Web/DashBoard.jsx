@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 
 import { Event } from "./util/event";
 import ChatArea from "./ChatArea";
@@ -11,7 +11,9 @@ const DashBoard = (props) => {
   const userInformation = props.userInformation;
   console.log(userInformation);
 
-  Event(userInformation, setUserSyncState);
+	useEffect(() => {
+		Event(userInformation, setUserSyncState);
+	}, [] );
 
 
   return <React.Fragment>

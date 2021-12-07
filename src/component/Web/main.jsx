@@ -50,13 +50,12 @@ const Main = () => {
   };
   return (
     <>
-        <ChatArea />
-		{/*	{(userInformation.isLoggedin === null) ? <Spinner /> :*/}
-		{/*		( (userInformation.isLoggedin === true) ?*/}
-		{/*			<DashBoard userInformation={userInformation.Information} /> :*/}
-		{/*			<CreateNewClient userData={loggedUserInfo} />*/}
-		{/*		)*/}
-		{/*	}*/}
+			{(userInformation.isLoggedin === null) ? <Spinner /> :
+				( (userInformation.isLoggedin === true) ?
+					<DashBoard userInformation={userInformation.Information} /> :
+					<CreateNewClient userData={loggedUserInfo} />
+				)
+			}
     </>
   );
 };
