@@ -8,10 +8,10 @@ const chatArea = () => {
     <Fragment>
       <Grid container direction="row">
         <CssBaseline />
-        <Grid item xs={3}>
+        <Grid item xs={4}>
           <SocialWindow />
         </Grid>
-        <Grid item xs={9}>
+        <Grid item xs={8}>
           <ChatWindow />
         </Grid>
       </Grid>
