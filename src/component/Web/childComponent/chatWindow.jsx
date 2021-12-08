@@ -24,7 +24,6 @@ const ChatWindow = () => {
             borderColor: "lineColor.main", }}
       >
         <Toolbar
-          item
           sx={{
             borderBottom: 1,
               borderColor: "lineColor.main"

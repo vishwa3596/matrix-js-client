@@ -5,6 +5,7 @@
 
 import { IndexedDBStore } from "matrix-js-sdk";
 import sdk from "matrix-js-sdk";
+import getClient from "./client.js"
 
 /**
                                          +---->STOPPED
@@ -30,17 +31,12 @@ export const clientSync = (client, setUserSyncState) => {
     console.log(" inside sync");
     switch (state) {
       case "ERROR":
-        console.log("ERROR")
 				setUserSyncState("ERROR")
         break;
       case "SYNCING":
-        console.log(" in syncing update the ui ");
         break;
       case "PREPARED":
-        console.log(" IN PREPARED STATE OF SYNCING ");
 				setUserSyncState("PREPARED");
-        let room = client.getRooms();
-        console.log(room);
         break;
       default:
         break;
@@ -48,26 +44,14 @@ export const clientSync = (client, setUserSyncState) => {
   });
 };
 
-export const Event = async (responseFromLogin, setUserSyncState) => {
-  console.log(responseFromLogin);
-  let store = new IndexedDBStore({
-    indexedDB: window.indexedDB,
-  });
-  await store.startup();
-  const client = sdk.createClient({
-    accessToken: responseFromLogin.accessToken,
-    userId: responseFromLogin.userId,
-    deviceId: responseFromLogin.deviceId,
-    baseUrl: responseFromLogin.baseUrl,
-    store: store,
-  });
+export const Event = async (setUserSyncState) => {
+  const client = await getClient();
   client.on("Room", (room) => {
     let roomId = room.roomId;
     console.log("in the room event, ", roomId);
   });
   clientSync(client,setUserSyncState);
   client.startClient();
-
 	console.log("SYNC DONE");
 };
 

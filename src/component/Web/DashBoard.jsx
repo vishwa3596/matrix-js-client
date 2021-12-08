@@ -12,7 +12,7 @@ const DashBoard = (props) => {
   console.log(userInformation);
 
 	useEffect( () => {
-		Event(userInformation, setUserSyncState);
+		Event(setUserSyncState);
 	},[]);
 
 
