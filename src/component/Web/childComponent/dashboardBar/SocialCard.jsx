@@ -1,9 +1,11 @@
 import Grid from "@mui/material/Grid";
 import {Avatar, Box, Paper, Toolbar, Typography} from "@mui/material";
-import React from "react";
+import React, {useState} from "react";
 import {styled} from "@mui/styles";
 import {alpha} from "@mui/system";
 import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
+import dp from "./assests/dp.jpg"
+import axios from "axios";
 const ProfileName = styled(Typography)(({theme}) => ({
     fontSize: "16px",
     fontWeight: "500",
@@ -31,17 +33,33 @@ const MsgCount = styled(Typography)(({theme}) => ({
 }))
 
 const ProfileCard = (props) => {
-    const room = props.room;
-    const userName = room.name;
+    const [AvatarUrl, onSettingavatarUrl] = useState("");
+    const eachRoom = props.eachRoom;
+    const userName = eachRoom.name;
     let NotificationValue;
-    let notificationCount = room.notificationCounts.total;
+    let notificationCount = undefined;
+    notificationCount = eachRoom.notification.total;
+    const avatarUrl = eachRoom.avatarUrl;
+    let avatar;
+    axios.get(avatarUrl ,{
+        responseType: "arraybuffer"
+    }).then(response => {
+        console.log(response);
+        let base64ImageString = Buffer.from(response.data, 'binary').toString('base64')
+        let url = `data:image/png;base64,${base64ImageString}`;
+        onSettingavatarUrl(url);
+    }).catch(err=>{
+        avatar = (<Avatar sx={{ bgcolor: "#5F95F5", p: '12px'}} aria-label="profile" src={dp} alt="P"/>)
+    })
+
     if(notificationCount === undefined){
         NotificationValue = (<Box sx={{display: 'flex', justifyContent: 'center'}}>
             <ErrorOutlineOutlinedIcon color="warning" sx={{ fontSize: 20}}/>
         </Box>)
-    }else{
+    }
+    else{
         if(parseInt(notificationCount) >= 1000){
-            notificationCount = Math.ceil(parseInt(notificationCount)/1000)
+            notificationCount = parseInt(notificationCount)/1000
             notificationCount = notificationCount.toString()+"K"
         }
         NotificationValue = <MsgCount>{notificationCount}</MsgCount>
@@ -65,10 +83,14 @@ const ProfileCard = (props) => {
                         cursor: "pointer",
                         borderRadius: "5px"
                     }}}>
-                    <Avatar sx={{ bgcolor: "#5F95F5", p: '12px'}} aria-label="profile">
-                        N
-                    </Avatar>
-                    <Grid container direction="row" sx={{ ml: 1, flex: 1 , justifyContent: "center"}} alignItems="center">
+                    {AvatarUrl.length > 0 ?
+                        <Avatar sx={{width: 45, height: 45}} aria-label="profile" src={AvatarUrl} alt="P"/>:
+                        <Avatar sx={{ bgcolor: "#5F95F5", p: '12px', width: 45, height: 45}} aria-label="profile">N</Avatar>}
+                    <Grid container direction="row" sx={{
+                        ml: 1,
+                        flex: 1 ,
+                        justifyContent: "center"
+                    }} alignItems="center">
                         <Grid item xs={10}>
                             <ProfileName>{userName}</ProfileName>
                         </Grid>

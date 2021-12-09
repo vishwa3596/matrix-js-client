@@ -1,5 +1,5 @@
-import sdk from "matrix-js-sdk";
 import getClient from "./client.js";
+
 /**
  * This function is to get the lastest joined Rooms list to render onto the server and also to attach diffrerent
  * events.
@@ -10,17 +10,25 @@ import getClient from "./client.js";
 const RoomData = async (onSettingRoomList) => {
     const client = await getClient();
     const rooms = client.getRooms();
-    onSettingRoomList(rooms);
-    let listOfRooms = []
-    client.on("Room.accountData", (event, room) => {
-        if(event.getType() === "m.room.avatar"){
-            console.log(event.getContent())
-        }
-        if(event.getType() === "m.room.colorscheme"){
-            console.log(event.getContent());
-        }
+    let listofAvatar = []
+    console.log(client);
+    rooms.forEach(e=> {
+        listofAvatar.push({
+            "room": e,
+            "name": e.name,
+            "notification": e.notificationCounts,
+            "avatarUrl":e.getAvatarUrl(client.baseUrl, 24, 24, "scale" , true),
+            "lastMsg": "LastMsg",
+            "latestTime": "wed"
+        });
+    });
+    const userid = (window.localStorage.user_id);
+    client.on("User.avatarUrl", (event, user) => {
+        console.log(user.avatarUrl," ", user.name);
     })
-    console.log(listOfRooms);
+    const user = client.getUser(userid)
+    console.log(user.avatarUrl);
+    onSettingRoomList(listofAvatar);
 }
 
 export default RoomData;
