@@ -7,6 +7,7 @@ const greenA = "#63FFE6";
 const greenB = "#5FF5B3";
 const white = "#FFF";
 const border = "#F2EEEE";
+const warning = '#FA715A'
 
 const theme = createTheme({
   palette: {
@@ -38,6 +39,9 @@ const theme = createTheme({
     textColor: {
       main: "#707579",
     },
+    warning:{
+      main: `${warning}`
+    }
   },
 });
 

@@ -35,7 +35,7 @@ const CustomScrollbars = (props) => (
     {...props}
   />
 );
-const SocialScroll = () => {
+const SocialScroll = (props) => {
   const classes = useStyles();
   return (
     <Box
@@ -46,7 +46,7 @@ const SocialScroll = () => {
       }}
     >
       <CustomScrollbars autoHide autoHideTimeout={500} autoHideDuration={200}>
-        <SocialCard />
+        {props.roomList.map(e => <SocialCard key={e.name} room={e}/>)}
       </CustomScrollbars>
     </Box>
   );

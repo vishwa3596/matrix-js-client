@@ -31,13 +31,13 @@ const ChatWindow = () => {
           }}
         >
               <ProfileCard />
-            <IconButton aria-label="delete">
+            <IconButton aria-label="search">
                 <SearchIcon />
             </IconButton>
-            <IconButton aria-label="delete">
+            <IconButton aria-label="Phone">
                 <PhoneIcon />
             </IconButton>
-            <IconButton aria-label="delete">
+            <IconButton aria-label="Options">
                 <MoreVertIcon />
             </IconButton>
           </Toolbar>
