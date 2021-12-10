@@ -5,7 +5,7 @@ import {styled} from "@mui/styles";
 import {alpha} from "@mui/system";
 const ProfileName = styled(Typography)(({theme}) => ({
     fontSize: "16px",
-    fontWeight: "500",
+    fontWeight: "600",
     color: alpha("#000", 0.8)
 }))
 const ProfileInfo = styled(Typography)(({theme}) => ({
@@ -17,7 +17,7 @@ const ProfileCard = () => {
     return(
         <Grid container direction="row" justifyContent="flex-start" alignItems="center">
             <Grid item>
-                <Avatar sx={{ bgcolor: "#5F95F5", marginLeft: "auto", marginRight: "auto"}} aria-label="profile">
+                <Avatar sx={{ bgcolor: "#5F95F5", marginLeft: "auto", marginRight: "auto", width: 45, height: 45}} aria-label="profile">
                     N
                 </Avatar>
             </Grid>

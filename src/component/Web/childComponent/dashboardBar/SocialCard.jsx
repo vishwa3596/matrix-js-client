@@ -6,9 +6,10 @@ import {alpha} from "@mui/system";
 import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
 import dp from "./assests/dp.jpg"
 import axios from "axios";
+
 const ProfileName = styled(Typography)(({theme}) => ({
     fontSize: "16px",
-    fontWeight: "500",
+    fontWeight: "600",
     color: alpha("#000", 0.8)
 }))
 
@@ -35,6 +36,7 @@ const MsgCount = styled(Typography)(({theme}) => ({
 const ProfileCard = (props) => {
     const [AvatarUrl, onSettingavatarUrl] = useState("");
     const eachRoom = props.eachRoom;
+    console.log(eachRoom);
     const userName = eachRoom.name;
     let NotificationValue;
     let notificationCount = undefined;
@@ -49,7 +51,7 @@ const ProfileCard = (props) => {
         let url = `data:image/png;base64,${base64ImageString}`;
         onSettingavatarUrl(url);
     }).catch(err=>{
-        avatar = (<Avatar sx={{ bgcolor: "#5F95F5", p: '12px'}} aria-label="profile" src={dp} alt="P"/>)
+        onSettingavatarUrl(dp);
     })
 
     if(notificationCount === undefined){
