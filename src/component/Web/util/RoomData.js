@@ -3,8 +3,6 @@ import getClient from "./client.js";
 /**
  * This function is to get the lastest joined Rooms list to render onto the server and also to attach diffrerent
  * events.
- *
- *
  * */
 
 const RoomData = async (onSettingRoomList) => {
@@ -25,6 +23,12 @@ const RoomData = async (onSettingRoomList) => {
     const userid = (window.localStorage.user_id);
     client.on("User.avatarUrl", (event, user) => {
         console.log(user.avatarUrl," ", user.name);
+    })
+    client.on("Room.timeline", (event, room, toStartOfTime) => {
+        if (event.getType() !== "m.room.message") {
+            return;
+        }
+        console.log("(%s) %s :: %s", room.name, event.getSender(), event.getContent().body);
     })
     const user = client.getUser(userid)
     console.log(user.avatarUrl);

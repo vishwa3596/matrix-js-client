@@ -18,8 +18,11 @@ const getClient = async () => {
             userId: window.localStorage.user_id,
             deviceId: window.localStorage.device_id,
             baseUrl: window.localStorage.base_url,
+            cryptoStore: new sdk.IndexedDBCryptoStore(indexedDB, 'indexDb-crypto-store'),
+            sessionStore: new sdk.WebStorageSessionStore(window.localStorage),
             store: store,
         });
+        await currentClient.initCrypto();
         isClientCreated = true;
         return currentClient;
     }
