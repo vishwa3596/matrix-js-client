@@ -8,12 +8,15 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import MsgField from "./MsgField";
 import ProfileCard from "./ProfileCard.jsx";
 import {IconButton} from "@material-ui/core";
-const ChatWindow = () => {
+
+const ChatWindow = (props) => {
+    console.log(props.userInformation);
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
   return (
     <Fragment>
       <Grid
@@ -30,7 +33,7 @@ const ChatWindow = () => {
 
           }}
         >
-              <ProfileCard />
+              <ProfileCard userInformation={props.userInformation}/>
             <IconButton aria-label="search">
                 <SearchIcon />
             </IconButton>

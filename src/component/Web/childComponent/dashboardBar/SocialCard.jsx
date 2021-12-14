@@ -7,6 +7,7 @@ import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
 import dp from "./assests/dp.jpg"
 import axios from "axios";
 
+
 const ProfileName = styled(Typography)(({theme}) => ({
     fontSize: "16px",
     fontWeight: "600",
@@ -33,8 +34,9 @@ const MsgCount = styled(Typography)(({theme}) => ({
     textAlign: "center"
 }))
 
-const ProfileCard = (props) => {
+const SocialCard = (props) => {
     const [AvatarUrl, onSettingavatarUrl] = useState("");
+    const [shouldRender, onShouldRender] = useState(false);
     const eachRoom = props.eachRoom;
     console.log(eachRoom);
     const userName = eachRoom.name;
@@ -66,16 +68,23 @@ const ProfileCard = (props) => {
         }
         NotificationValue = <MsgCount>{notificationCount}</MsgCount>
     }
+    const onClickingChat = () => {
+        console.log("here clicking")
+        onShouldRender(true);
+        const user = {
+            avatarUrl: AvatarUrl,
+            userName: userName
+        };
+        props.onSelectingChat(user);
+    }
     return(
-        <Box sx={{
-
-        }}>
+        <Box>
             <Toolbar sx={{
                 justifyItems: "center",
                 width: "100%",
 
             }}>
-                <Paper elevation={0} sx={{
+                <Paper elevation={0} onClick={onClickingChat}sx={{
                     p: '2px 4px',
                     display: 'flex',
                     alignItems: 'center',
@@ -116,4 +125,4 @@ const ProfileCard = (props) => {
         </Box>
     )
 }
-export default ProfileCard;
+export default SocialCard;

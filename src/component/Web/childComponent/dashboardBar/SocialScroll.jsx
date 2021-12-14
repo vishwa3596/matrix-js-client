@@ -46,7 +46,7 @@ const SocialScroll = (props) => {
       }}
     >
       <CustomScrollbars autoHide autoHideTimeout={500} autoHideDuration={200}>
-        {props.roomList.map(e => <SocialCard key={e.name} eachRoom={e}/>)}
+        {props.roomList.map(e => <SocialCard onSelectingChat={props.onSelectingChat} key={e.name} eachRoom={e}/>)}
       </CustomScrollbars>
     </Box>
   );

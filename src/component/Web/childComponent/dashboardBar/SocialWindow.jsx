@@ -1,5 +1,4 @@
 import { Fragment } from "react";
-import Grid from "@mui/material/Grid";
 import {Box, Toolbar} from "@mui/material";
 import { IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -28,7 +27,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   borderRadius: "10px",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
   },
   "&:hover": {
@@ -64,7 +62,7 @@ const socialWindow = (props) => {
               </Paper>
       </Toolbar>
       </Box>
-      <SocialScroll roomList={props.roomList}/>
+      <SocialScroll onSelectingChat={props.onSelectingChat} roomList={props.roomList}/>
     </Fragment>
 
   );
