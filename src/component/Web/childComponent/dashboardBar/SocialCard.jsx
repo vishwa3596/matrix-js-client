@@ -42,7 +42,7 @@ const SocialCard = (props) => {
     const userName = eachRoom.name;
     let NotificationValue;
     let notificationCount = undefined;
-    notificationCount = eachRoom.notification.total;
+    notificationCount = eachRoom.notification;
     const avatarUrl = eachRoom.avatarUrl;
     let avatar;
     axios.get(avatarUrl ,{

@@ -37,7 +37,7 @@ const SelectChat = () => {
 			<DisplayName color="primary"> Ping </DisplayName>
 
 			<TagLine>
-				Select a chat to start conversation
+				select a chat to start conversation
 			</TagLine>
 		</SelectChatBox>
 	)

@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+
 const renderThumb = ({ style, ...props }) => {
   const thumbStyle = {
     borderRadius: 6,

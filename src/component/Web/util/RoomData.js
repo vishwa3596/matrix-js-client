@@ -1,38 +1,43 @@
 import getClient from "./client.js";
+global.Olm = require('olm')
 
 /**
- * This function is to get the lastest joined Rooms list to render onto the server and also to attach diffrerent
- * events.
+ * This function is to get the lastest joined Rooms list to render onto the server and also to attach diffrerent.
  * */
 
 const RoomData = async (onSettingRoomList) => {
     const client = await getClient();
     const rooms = client.getRooms();
-    let listofAvatar = []
-    console.log(client);
-    rooms.forEach(e=> {
-        listofAvatar.push({
-            "room": e,
-            "name": e.name,
-            "notification": e.notificationCounts,
-            "avatarUrl":e.getAvatarUrl(client.baseUrl, 24, 24, "scale" , true),
-            "lastMsg": "LastMsg",
-            "latestTime": "wed"
-        });
-    });
-    const userid = (window.localStorage.user_id);
-    client.on("User.avatarUrl", (event, user) => {
-        console.log(user.avatarUrl," ", user.name);
-    })
-    client.on("Room.timeline", (event, room, toStartOfTime) => {
-        if (event.getType() !== "m.room.message") {
-            return;
-        }
-        console.log("(%s) %s :: %s", room.name, event.getSender(), event.getContent().body);
-    })
-    const user = client.getUser(userid)
-    console.log(user.avatarUrl);
-    onSettingRoomList(listofAvatar);
-}
+    rooms.forEach(e => console.log(e.name, " ",client.isRoomEncrypted(e.roomId)));
+    const roomData = rooms.map(e => ({
+        "name": e.name,
+        "notification": e.getUnreadNotificationCount(),
+        "avatarUrl": e.getAvatarUrl(client.baseUrl, 24, 24, "scale" , true),
+        "roomId": e.roomId,
+        "LastMsg": "This is the last msg..."
+    }))
 
+
+
+    client.on("Room.timeline", async (event, room, toStartOfTime) => {
+        if(event.getType() === "m.room.encrypted"){
+            const response = await event.attemptDecryption(client.crypto, {isRetry: true})
+            console.log(response);
+            console.log("err")
+            console.log(room.roomId, " ", event.getContent().ciphertext);
+        }
+        if (event.getType() === "m.room.message") {
+            console.log("msg")
+            console.log("(%s) %s :: %s", room.name, event.getSender(), event.getContent().body, client.isRoomEncrypted(room.roomId));
+            roomData.forEach(e => {
+                if(e.name === room.name){
+                    e.notification = room.getUnreadNotificationCount()
+                    e.LastMsg = event.getContent().body
+                }
+            })
+            onSettingRoomList(roomData);
+        }
+    })
+    onSettingRoomList(roomData);
+}
 export default RoomData;

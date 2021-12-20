@@ -22,6 +22,8 @@ const getClient = async () => {
             sessionStore: new sdk.WebStorageSessionStore(window.localStorage),
             store: store,
         });
+
+
         await currentClient.initCrypto();
         isClientCreated = true;
         return currentClient;
