@@ -8,7 +8,12 @@ import SendIcon from "@mui/icons-material/Send";
 import SentimentSatisfiedAltOutlinedIcon from '@mui/icons-material/SentimentSatisfiedAltOutlined';
 import KeyboardVoiceOutlinedIcon from '@mui/icons-material/KeyboardVoiceOutlined';
 import AttachFileIcon from "@mui/icons-material/AttachFile";
-
+import {styled} from "@mui/system";
+const PaperComponent = styled(Paper)(({theme}) => ({
+    [theme.breakpoints.down('md')]: {
+        width: "100%"
+    },
+}))
 const MsgField = () => {
     const [msg, onEnteringMsg] = useState("");
     const onInputText = (e) => {
@@ -19,7 +24,7 @@ const MsgField = () => {
     return (
         <Fragment>
             <Grid container direction="row" justifyContent="center">
-                <Paper
+                <PaperComponent
                     elevation={0}
                     component="form"
                     sx={{
@@ -29,6 +34,7 @@ const MsgField = () => {
                         width: "70%",
                         borderRadius: "10px",
                         marginBottom: "5px",
+
                     }}
                 >
                     <IconButton sx={{p: "10px"}} aria-label="attach">
@@ -56,7 +62,7 @@ const MsgField = () => {
                     >
                         {msg.length > 0 ? <SendIcon/> : <KeyboardVoiceOutlinedIcon/>}
                     </IconButton>
-                </Paper>
+                </PaperComponent>
             </Grid>
         </Fragment>
     );

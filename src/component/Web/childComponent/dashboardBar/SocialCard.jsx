@@ -44,6 +44,8 @@ const SocialCard = (props) => {
     let notificationCount = undefined;
     notificationCount = eachRoom.notification;
     const avatarUrl = eachRoom.avatarUrl;
+    let msg = eachRoom.LastMsg;
+    msg = msg.substr(0, 30);
     let avatar;
     axios.get(avatarUrl ,{
         responseType: "arraybuffer"
@@ -109,7 +111,7 @@ const SocialCard = (props) => {
                             <LastSeen>wed</LastSeen>
                         </Grid>
                         <Grid item xs={10}>
-                            <ProfileInfo>This is chat...</ProfileInfo>
+                            <ProfileInfo>{msg}</ProfileInfo>
                         </Grid>
                         <Grid item xs={2} sx={{
                             justifyContent: "center",

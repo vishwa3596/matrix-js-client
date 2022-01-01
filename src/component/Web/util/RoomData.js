@@ -2,7 +2,7 @@ import getClient from "./client.js";
 global.Olm = require('olm')
 
 /**
- * This function is to get the lastest joined Rooms list to render onto the server and also to attach diffrerent.
+ * This function is to get the latest joined Rooms list to render onto the server and also to attach different.
  * */
 
 const RoomData = async (onSettingRoomList) => {
@@ -17,8 +17,6 @@ const RoomData = async (onSettingRoomList) => {
         "LastMsg": "This is the last msg..."
     }))
 
-
-
     client.on("Room.timeline", async (event, room, toStartOfTime) => {
         if(event.getType() === "m.room.encrypted"){
             const response = await event.attemptDecryption(client.crypto, {isRetry: true})
@@ -27,7 +25,6 @@ const RoomData = async (onSettingRoomList) => {
             console.log(room.roomId, " ", event.getContent().ciphertext);
         }
         if (event.getType() === "m.room.message") {
-            console.log("msg")
             console.log("(%s) %s :: %s", room.name, event.getSender(), event.getContent().body, client.isRoomEncrypted(room.roomId));
             roomData.forEach(e => {
                 if(e.name === room.name){
@@ -35,8 +32,9 @@ const RoomData = async (onSettingRoomList) => {
                     e.LastMsg = event.getContent().body
                 }
             })
-            onSettingRoomList(roomData);
         }
+        console.log(roomData);
+        onSettingRoomList(roomData);
     })
     onSettingRoomList(roomData);
 }

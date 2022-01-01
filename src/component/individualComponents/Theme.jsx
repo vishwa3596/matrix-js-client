@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material/styles";
+import {createTheme} from "@mui/material/styles";
 
 const blueA = "#5F95F5";
 const blueB = "#63C4FF";
@@ -9,40 +9,76 @@ const white = "#FFF";
 const border = "#F2EEEE";
 const warning = '#FA715A'
 
-const theme = createTheme({
-  palette: {
-    common: {
-      blueA: `${blueA}`,
-      blueB: `${blueB}`,
-      blueC: `${blueC}`,
-      greenA: `${greenA}`,
-      greenB: `${greenB}`,
+export const lightTheme = createTheme({
+    palette: {
+        mode: "light",
+        common: {
+            blueA: `${blueA}`,
+            blueB: `${blueB}`,
+            blueC: `${blueC}`,
+            greenA: `${greenA}`,
+            greenB: `${greenB}`,
+        },
+        primary: {
+            main: `${blueA}`,
+        },
+        secondary: {
+            main: `${blueB}`,
+        },
+        appbarColor: {
+            main: `${white}`,
+        },
+        lightText: {
+            main: `${blueC}`,
+        },
+        chatWindow: {
+            main: `${blueC}`,
+        },
+        lineColor: {
+            main: `${border}`,
+        },
+        textColor: {
+            main: "#707579",
+        },
+        warning: {
+            main: `${warning}`
+        }
     },
-    primary: {
-      main: `${blueA}`,
-    },
-    secondary: {
-      main: `${blueB}`,
-    },
-    appbarColor: {
-      main: `${white}`,
-    },
-    lightText: {
-      main: `${blueC}`,
-    },
-    chatWindow: {
-      main: `${blueC}`,
-    },
-    lineColor: {
-      main: `${border}`,
-    },
-    textColor: {
-      main: "#707579",
-    },
-    warning:{
-      main: `${warning}`
-    }
-  },
 });
 
-export default theme;
+export const darkTheme = createTheme({
+    palette: {
+        mode: "dark",
+        common: {
+            blueA: `${blueA}`,
+            blueB: `${blueB}`,
+            blueC: `${blueC}`,
+            greenA: `${greenA}`,
+            greenB: `${greenB}`,
+        },
+        primary: {
+            main: `${blueA}`,
+        },
+        secondary: {
+            main: `${blueB}`,
+        },
+        appbarColor: {
+            main: `${white}`,
+        },
+        lightText: {
+            main: `${blueC}`,
+        },
+        chatWindow: {
+            main: `${blueC}`,
+        },
+        lineColor: {
+            main: `${border}`,
+        },
+        textColor: {
+            main: "#707579",
+        },
+        warning: {
+            main: `${warning}`
+        }
+    }
+});
