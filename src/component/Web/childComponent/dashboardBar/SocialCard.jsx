@@ -66,7 +66,7 @@ const SocialCard = (props) => {
     else{
         if(parseInt(notificationCount) >= 1000){
             notificationCount = parseInt(notificationCount)/1000
-            notificationCount = notificationCount.toString()+"K"
+            notificationCount = notificationCount.toString().substr(0, 3)+"K"
         }
         NotificationValue = <MsgCount>{notificationCount}</MsgCount>
     }
