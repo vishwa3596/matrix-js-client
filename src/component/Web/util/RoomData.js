@@ -1,6 +1,5 @@
 import getClient from "./client.js";
 global.Olm = require('olm')
-
 /**
  * This function is to get the latest joined Rooms list to render onto the server and also to attach different.
  * */
@@ -16,6 +15,8 @@ const RoomData = async (onSettingRoomList) => {
         "roomId": e.roomId,
         "LastMsg": "This is the last msg..."
     }))
+    //roomStore.dispatch(renderingUserList(roomData));
+    //console.log(" after first update ", roomStore.getState())
 
     client.on("Room.timeline", async (event, room, toStartOfTime) => {
         if(event.getType() === "m.room.encrypted"){
@@ -32,6 +33,8 @@ const RoomData = async (onSettingRoomList) => {
                     e.LastMsg = event.getContent().body
                 }
             })
+            //roomStore.dispatch(renderingUserList(roomData));
+            //console.log(" after second update ", roomStore.getState())
         }
         console.log(roomData);
         onSettingRoomList(roomData);

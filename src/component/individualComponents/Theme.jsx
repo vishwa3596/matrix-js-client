@@ -23,7 +23,7 @@ export const lightTheme = createTheme({
             main: `${blueA}`,
         },
         secondary: {
-            main: `${blueB}`,
+            main: `${greenA}`,
         },
         appbarColor: {
             main: `${white}`,

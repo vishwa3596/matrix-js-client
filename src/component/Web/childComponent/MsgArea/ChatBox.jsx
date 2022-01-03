@@ -1,8 +1,10 @@
-import {Box, CssBaseline, Typography} from "@mui/material";
+import {Box,Typography} from "@mui/material";
 import * as React from "react";
 import DoneAllOutlinedIcon from '@mui/icons-material/DoneAllOutlined';
 import Grid from "@mui/material/Grid";
+import ReplyOutlinedIcon from '@mui/icons-material/ReplyOutlined';
 
+import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
 export const LeftChatBox = () => {
     return (
         <Box
@@ -20,6 +22,7 @@ export const LeftChatBox = () => {
                 borderRadius: "10px",
                 borderColor: "#F2EEEE",
                 maxWidth: "50%",
+                bgcolor: 'rgba(99,255,230, 0.2)'
             }}>
                 <Grid container direction="column">
                     <Grid item>
@@ -61,17 +64,20 @@ export const LeftChatBox = () => {
                             display: "flex",
                             justifyContent: "flex-end",
                             alignItems: "center",
-                            paddingRight: "3px"
+                            paddingRight: "3px",
+                            columnGap: "5px"
                         }}>
-                            <Typography sx={{
-                                fontSize: "14px",
-                                fontWeight: "100",
-                                paddingRight: "5px",
-                                color: 'textColor.main'
-                            }}>
-                                00:16
-                            </Typography>
-                            <DoneAllOutlinedIcon  color="primary" fontSize="14px"/>
+                                <ReplyOutlinedIcon color="textColor" fontSize="14px"/>
+                                <Typography sx={{
+                                    fontSize: "14px",
+                                    fontWeight: "100",
+                                    color: 'textColor.main'
+                                }}>
+                                    00:16
+                                </Typography>
+                                <DoneAllOutlinedIcon  color="primary" fontSize="14px"/>
+                                <MoreHorizOutlinedIcon color="textColor" fontSize="14px"/>
+
                         </Box>
                     </Grid>
                 </Grid>
@@ -100,6 +106,7 @@ export const RightChatBox = () => {
                 borderRadius: "10px",
                 borderColor: "#F2EEEE",
                 maxWidth: "50%",
+                bgcolor: 'rgba(95,149,245, 0.2)'
             }}>
                 <Grid container direction="column">
                     <Grid item>
@@ -140,17 +147,20 @@ export const RightChatBox = () => {
                             display: "flex",
                             justifyContent: "flex-end",
                             alignItems: "center",
-                            paddingRight: "3px"
+                            paddingRight: "3px",
+                            columnGap: "5px"
                         }}>
+                            <ReplyOutlinedIcon color="textColor" fontSize="14px"/>
                             <Typography sx={{
                                 fontSize: "14px",
                                 fontWeight: "100",
-                                paddingRight: "5px",
                                 color: 'textColor.main'
                             }}>
                                 00:16
                             </Typography>
                             <DoneAllOutlinedIcon  color="primary" fontSize="14px"/>
+                            <MoreHorizOutlinedIcon color="textColor" fontSize="14px"/>
+
                         </Box>
                     </Grid>
                 </Grid>
