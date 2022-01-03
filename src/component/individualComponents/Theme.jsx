@@ -22,6 +22,9 @@ export const lightTheme = createTheme({
         primary: {
             main: `${blueA}`,
         },
+        blueB:{
+            main: `${blueB}`
+        },
         secondary: {
             main: `${greenA}`,
         },

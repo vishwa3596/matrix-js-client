@@ -1,14 +1,14 @@
-import {Box,Typography} from "@mui/material";
+import {Box, Typography} from "@mui/material";
 import * as React from "react";
 import DoneAllOutlinedIcon from '@mui/icons-material/DoneAllOutlined';
 import Grid from "@mui/material/Grid";
 import ReplyOutlinedIcon from '@mui/icons-material/ReplyOutlined';
 
 import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
+
 export const LeftChatBox = () => {
     return (
-        <Box
-            sx={{
+        <Box sx={{
                 height: "auto",
                 width: "100%",
                 display: "flex",
@@ -22,17 +22,19 @@ export const LeftChatBox = () => {
                 borderRadius: "10px",
                 borderColor: "#F2EEEE",
                 maxWidth: "50%",
-                bgcolor: 'rgba(99,255,230, 0.2)'
+                bgcolor: 'rgba(99,196,255, 0.2)'
             }}>
                 <Grid container direction="column">
                     <Grid item>
                         <Box sx={{
-                            paddingLeft: "3px"
+                            paddingLeft: "15px",
+                            paddingTop: "10px",
+                            paddingBottom: "5px"
                         }}>
                             <Typography sx={{
                                 fontSize: "14px",
                                 fontWeight: 600,
-                                color: "primary.main"
+                                color: "blueB.main"
                             }}>
                                 Sender Name
                             </Typography>
@@ -40,8 +42,8 @@ export const LeftChatBox = () => {
                     </Grid>
                     <Grid item>
                         <Box sx={{
-                            paddingLeft: "3px",
-                            paddingRight: "3px"
+                            paddingLeft: "15px",
+                            paddingRight: "15px"
                         }}>
                             <Typography sx={{
                                 fontSize: "14px",
@@ -67,23 +69,20 @@ export const LeftChatBox = () => {
                             paddingRight: "3px",
                             columnGap: "5px"
                         }}>
-                                <ReplyOutlinedIcon color="textColor" fontSize="14px"/>
-                                <Typography sx={{
-                                    fontSize: "14px",
-                                    fontWeight: "100",
-                                    color: 'textColor.main'
-                                }}>
-                                    00:16
-                                </Typography>
-                                <DoneAllOutlinedIcon  color="primary" fontSize="14px"/>
-                                <MoreHorizOutlinedIcon color="textColor" fontSize="14px"/>
-
+                            <ReplyOutlinedIcon color="textColor" fontSize="14px"/>
+                            <Typography sx={{
+                                fontSize: "14px",
+                                fontWeight: "100",
+                                color: 'textColor.main'
+                            }}>
+                                00:16
+                            </Typography>
+                            <DoneAllOutlinedIcon color="primary" fontSize="14px"/>
+                            <MoreHorizOutlinedIcon color="textColor" fontSize="14px"/>
                         </Box>
                     </Grid>
                 </Grid>
-
             </Box>
-
         </Box>
     )
 }
@@ -97,7 +96,7 @@ export const RightChatBox = () => {
                 display: "flex",
                 direction: "column",
                 justifyContent: "flex-end",
-                padding: "10px"
+                padding: "5px"
 
             }}>
             <Box sx={{
@@ -111,7 +110,9 @@ export const RightChatBox = () => {
                 <Grid container direction="column">
                     <Grid item>
                         <Box sx={{
-                            paddingLeft: "3px"
+                            paddingLeft: "15px",
+                            paddingTop: "10px",
+                            paddingBottom: "5px"
                         }}>
                             <Typography sx={{
                                 fontSize: "14px",
@@ -124,8 +125,8 @@ export const RightChatBox = () => {
                     </Grid>
                     <Grid item>
                         <Box sx={{
-                            paddingLeft: "3px",
-                            paddingRight: "3px"
+                            paddingLeft: "15px",
+                            paddingRight: "15px"
                         }}>
                             <Typography sx={{
                                 fontSize: "14px",
@@ -137,7 +138,7 @@ export const RightChatBox = () => {
                                 held on 22 July 1947, and it became the official flag of the Dominion of India on 15
                                 August 1947. The flag was subsequently retained as that of the Republic of India. In
                                 India, the term "tricolour" almost always refers to the Indian national flag. The flag
-                                is based on the Swaraj flag,
+                                is
                             </Typography>
                         </Box>
 
@@ -158,13 +159,11 @@ export const RightChatBox = () => {
                             }}>
                                 00:16
                             </Typography>
-                            <DoneAllOutlinedIcon  color="primary" fontSize="14px"/>
+                            <DoneAllOutlinedIcon color="primary" fontSize="14px"/>
                             <MoreHorizOutlinedIcon color="textColor" fontSize="14px"/>
-
                         </Box>
                     </Grid>
                 </Grid>
-
             </Box>
         </Box>
     )
