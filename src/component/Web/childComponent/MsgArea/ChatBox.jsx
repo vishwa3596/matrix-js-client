@@ -22,7 +22,8 @@ export const LeftChatBox = () => {
                 borderRadius: "10px",
                 borderColor: "#F2EEEE",
                 maxWidth: "50%",
-                bgcolor: 'rgba(99,196,255, 0.2)'
+                bgcolor: 'rgba(99,196,255, 0.2)',
+                minWidth: "20%"
             }}>
                 <Grid container direction="column">
                     <Grid item>
@@ -56,8 +57,7 @@ export const LeftChatBox = () => {
                                 Dominion of India on 15 August 1947. The flag was subsequently retained as that of the
                                 Republic of India. In India, the term "tricolour" almost always refers to the Indian
                                 national flag.
-                                The flag is based on the Swaraj flag, a flag of the Indian National Congress designed by
-                                Pingali Venkayya
+                                The flag is based on the Swaraj flag, a flag of the Indian National Congress designed
                             </Typography>
                         </Box>
                     </Grid>
@@ -105,7 +105,8 @@ export const RightChatBox = () => {
                 borderRadius: "10px",
                 borderColor: "#F2EEEE",
                 maxWidth: "50%",
-                bgcolor: 'rgba(95,149,245, 0.2)'
+                bgcolor: 'rgba(95,149,245, 0.2)',
+                minWidth: "20%"
             }}>
                 <Grid container direction="column">
                     <Grid item>
@@ -132,13 +133,7 @@ export const RightChatBox = () => {
                                 fontSize: "14px",
                                 fontWeight: "500"
                             }}>
-                                is a horizontal rectangular tricolour of India saffron,
-                                white and India green; with the Ashoka Chakra, a 24-spoke wheel, in navy blue at its
-                                centre. It was adopted in its present form during a meeting of the Constituent Assembly
-                                held on 22 July 1947, and it became the official flag of the Dominion of India on 15
-                                August 1947. The flag was subsequently retained as that of the Republic of India. In
-                                India, the term "tricolour" almost always refers to the Indian national flag. The flag
-                                is
+                                k
                             </Typography>
                         </Box>
 
