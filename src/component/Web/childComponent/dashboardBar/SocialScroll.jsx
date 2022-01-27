@@ -1,10 +1,11 @@
 import * as React from "react";
-
 import Box from "@mui/material/Box";
 import { makeStyles } from "@mui/styles";
 import { Scrollbars } from "react-custom-scrollbars";
-
 import SocialCard from "./SocialCard";
+import {useSelector} from "react-redux";
+import { socialWindowStore } from "../../util/CentralStore/CentralStoreMain";
+import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,7 +37,18 @@ const CustomScrollbars = (props) => (
     {...props}
   />
 );
+
 const SocialScroll = (props) => {
+  const [userContactList, updateUserContactList] = useState([]);
+  socialWindowStore.subscribe(() => {
+    let userData = socialWindowStore.getState();
+    console.log(userData, " ", userData.CentralReducer);
+    if(userData !== undefined){
+      console.log(userData.CentralReducer.contactList);
+      userData = userData.CentralReducer.contactList
+      updateUserContactList(userData);
+    }
+  });
   const classes = useStyles();
   return (
     <Box
@@ -47,7 +59,12 @@ const SocialScroll = (props) => {
       }}
     >
       <CustomScrollbars autoHide autoHideTimeout={500} autoHideDuration={200}>
-        {props.roomList.map(e => <SocialCard onSelectingChat={props.onSelectingChat} key={e.name} eachRoom={e}/>)}
+        {userContactList.length > 0 ? userContactList.map(e => 
+        <SocialCard 
+          onSelectingChat={props.onSelectingChat} 
+          key={e.name} 
+          eachRoom={e}
+        />):<></>}
       </CustomScrollbars>
     </Box>
   );

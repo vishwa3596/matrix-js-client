@@ -7,7 +7,6 @@ import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
 import dp from "./assests/dp.jpg"
 import axios from "axios";
 
-
 const ProfileName = styled(Typography)(({theme}) => ({
     fontSize: "16px",
     fontWeight: "600",
@@ -44,7 +43,7 @@ const SocialCard = (props) => {
     let notificationCount = undefined;
     notificationCount = eachRoom.notification;
     const avatarUrl = eachRoom.avatarUrl;
-    let msg = eachRoom.LastMsg;
+    let msg = eachRoom.lastMsg;
     msg = msg.substr(0, 30);
     let avatar;
     axios.get(avatarUrl ,{

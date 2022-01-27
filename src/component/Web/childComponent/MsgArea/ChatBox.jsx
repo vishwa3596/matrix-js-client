@@ -133,7 +133,13 @@ export const RightChatBox = () => {
                                 fontSize: "14px",
                                 fontWeight: "500"
                             }}>
-                                k
+                                is a horizontal rectangular tricolour of India saffron,
+                                white and India green; with the Ashoka Chakra, a 24-spoke wheel,
+                                in navy blue at its centre. It was adopted in its present form during a meeting of the
+                                Constituent Assembly held on 22 July 1947, and it became the official flag of the
+                                Dominion of India on 15 August 1947. The flag was subsequently retained as that of the
+                                Republic of India. In India, the term "tricolour" almost always refers to the Indian
+                                national flag.
                             </Typography>
                         </Box>
 
