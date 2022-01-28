@@ -38,7 +38,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const socialWindow = (props) => {
-  console.log(props.roomList);
   const handleSearchClick = () => {};
   return (
     <Fragment>
@@ -62,7 +61,7 @@ const socialWindow = (props) => {
               </Paper>
       </Toolbar>
       </Box>
-      <SocialScroll onSelectingChat={props.onSelectingChat} roomList={props.roomList}/>
+      <SocialScroll onSelectingChat={props.onSelectingChat}/>
     </Fragment>
 
   );

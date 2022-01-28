@@ -5,9 +5,16 @@ import {combineReducers, createStore} from "@reduxjs/toolkit";
  * **/
 const initialStateOfUser = {
     "userName": "",
+    "baseUrl": "",
+    "accessToken": "",
+    "deviceId": "",
     "avatarUrl": "",
     "contactList": [],
-    "currentActiveRoom": "",
+    "currentActive": {
+        "roomId": "",
+        "roomAvatar" : "",
+        "members": [],
+    },
     "colorMode": "lightMode"
 }
 
@@ -46,6 +53,25 @@ const CentralReducer = (state=initialStateOfUser, action) => {
             return{
                 ...state,
                 contactList: [...copyList]
+            }
+        }
+        case 'updateUserInformation': {
+            return {
+                ...state,
+                userName: action.payload.userName,
+                deviceId: action.payload.deviceId,
+                baseUrl: action.payload.baseUrl,
+                accessToken: action.payload.accessToken,
+            }
+        }
+        case 'currentRoomInformation': {
+            return {
+                ...state,
+                currentActive: {
+                    ...state.currentActive,
+                    roomId: action.payload.roomId,
+                    roomAvatar: action.payload.roomAvatar
+                }
             }
         }
         default: {

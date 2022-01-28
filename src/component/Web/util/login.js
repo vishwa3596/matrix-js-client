@@ -1,6 +1,6 @@
 import sdk from "matrix-js-sdk";
 import { storage } from "./storage.js";
-
+import { socialWindowStore } from "./CentralStore/CentralStoreMain.js";
 export const createClient = (username, password) => {
   return sdk.createClient(storage.baseUrl);
 };
@@ -22,6 +22,12 @@ export const login = async (username, password) => {
     user: username,
     password: password,
   });
+  const userInfo = {
+    "userName": loginResponse.user_id,
+    "baseUrl": loginResponse.well_known["m.homeserver"].base_url,
+    "deviceId": loginResponse.device_id,
+    "accessToken": loginResponse.access_token
+  }
   const storage = window.localStorage;
   storage.setItem("user_id", loginResponse.user_id);
   storage.setItem("isAccessToken", "yes");
@@ -31,5 +37,6 @@ export const login = async (username, password) => {
   );
   storage.setItem("device_id", loginResponse.device_id);
   storage.setItem("access_token", loginResponse.access_token);
+  socialWindowStore.dispatch({type: "updateUserInformation", payload: userInfo});
   return loginResponse;
 };

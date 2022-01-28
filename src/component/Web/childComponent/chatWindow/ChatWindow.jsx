@@ -11,7 +11,7 @@ import MsgBox from "../MsgArea/MsgBox.jsx";
 import MsgField from "../MsgArea/MsgField.jsx";
 
 const ChatWindow = (props) => {
-    console.log(props.userInformation);
+    console.log(props.roomInformation);
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
@@ -33,7 +33,7 @@ const ChatWindow = (props) => {
 
                     }}
                 >
-                    <ProfileCard userInformation={props.userInformation}/>
+                    <ProfileCard roomInformation={props.roomInformation}/>
                     <IconButton aria-label="search">
                         <SearchIcon/>
                     </IconButton>

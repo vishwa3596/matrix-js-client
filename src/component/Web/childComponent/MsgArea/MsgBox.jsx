@@ -5,6 +5,9 @@ import {LeftChatBox , RightChatBox} from "./ChatBox.jsx";
 import {makeStyles} from "@mui/styles";
 import {Scrollbars} from "react-custom-scrollbars";
 import * as React from "react";
+import axios from "axios";
+import { useEffect } from "react";
+import { socialWindowStore } from "../../util/CentralStore/CentralStoreMain.js";
 
 const DisplayBox = styled(Box)(({theme}) => ({
     width: "100%",
@@ -46,6 +49,11 @@ const CustomScrollbars = (props) => (
     />
 );
 const MsgBox = () => {
+    useEffect(() => {
+        //const url = client.baseUrl +  `/_matrix/client/r0/rooms/${e.roomId}/messages?limit=10&access_token=${client.accessToken}&dir=b`
+        // let result = await axios.get(url);
+        // console.log(result);
+    },[])
     const classes = useStyles();
     return (
         <DisplayBox>
@@ -57,33 +65,31 @@ const MsgBox = () => {
                     borderColor: "#F2EEEE"
                 }}>
                 <CustomScrollbars autoHide autoHideTimeout={500} autoHideDuration={200}>
-                    <LeftChatBox/>
-                    <LeftChatBox/>
-                    <LeftChatBox/>
-                    <LeftChatBox/>
-                    <LeftChatBox/>
-                    <LeftChatBox/>
-                    <LeftChatBox/>
-                    <LeftChatBox/>
-                    <LeftChatBox/>
-                    <LeftChatBox/>
-                    <LeftChatBox/>
-                    <LeftChatBox/>
+                    <LeftChatBox  />
+                    <LeftChatBox  />
+                    <LeftChatBox  />
+                    <LeftChatBox  />
+                    <LeftChatBox  />
+                    <LeftChatBox  />
+                    <LeftChatBox  />
+                    <LeftChatBox  />
+                    <LeftChatBox  />
+                    <LeftChatBox  />
+                    <LeftChatBox  />
+                    <LeftChatBox  />
                     <RightChatBox />
                     <RightChatBox />
-                    <LeftChatBox/>
-                    <LeftChatBox/>
-                    <LeftChatBox/>
-                    <LeftChatBox/>
-                    <LeftChatBox/>
-                    <LeftChatBox/>
-                    <LeftChatBox/>
-                    <LeftChatBox/>
+                    <LeftChatBox  />
+                    <LeftChatBox  />
+                    <LeftChatBox  />
+                    <LeftChatBox  />
+                    <LeftChatBox  />
+                    <LeftChatBox  />
+                    <LeftChatBox  />
+                    <LeftChatBox  />
                 </CustomScrollbars>
             </Box>
             <MsgField/>
         </DisplayBox>
-)
-}
-
+)}
 export default MsgBox;

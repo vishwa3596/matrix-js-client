@@ -6,6 +6,7 @@ import {alpha} from "@mui/system";
 import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
 import dp from "./assests/dp.jpg"
 import axios from "axios";
+import { socialWindowStore } from "../../util/CentralStore/CentralStoreMain";
 
 const ProfileName = styled(Typography)(({theme}) => ({
     fontSize: "16px",
@@ -71,10 +72,10 @@ const SocialCard = (props) => {
         console.log("here clicking")
         onShouldRender(true);
         const user = {
-            avatarUrl: AvatarUrl,
-            userName: userName
+            roomAvatar: AvatarUrl,
+            roomId: userName
         };
-        props.onSelectingChat(user);
+        socialWindowStore.dispatch({type: "currentRoomInformation", payload: user});
     }
     return(
         <Box>

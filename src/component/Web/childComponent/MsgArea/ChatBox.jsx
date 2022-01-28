@@ -3,7 +3,6 @@ import * as React from "react";
 import DoneAllOutlinedIcon from '@mui/icons-material/DoneAllOutlined';
 import Grid from "@mui/material/Grid";
 import ReplyOutlinedIcon from '@mui/icons-material/ReplyOutlined';
-
 import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
 
 export const LeftChatBox = () => {

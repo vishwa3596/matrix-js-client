@@ -1,13 +1,17 @@
 import getClient from "./client.js";
 import { socialWindowStore } from "./CentralStore/CentralStoreMain.js";
+
 global.Olm = require('olm')
+
 /**
  * This function is to get the latest joined Rooms list to render onto the server and also to attach different.
  * */
 const RoomData = async () => {
     const client = await getClient();
     const rooms = client.getRooms();
-    rooms.forEach(e => console.log(e.name, " ",client.isRoomEncrypted(e.roomId)));
+    rooms.forEach(e => {
+        console.log(e.name, " ",client.isRoomEncrypted(e.roomId))
+    });
     let roomData = rooms.map(e => ({
         "name": e.name,
         "notification": e.getUnreadNotificationCount(),
@@ -37,6 +41,9 @@ const RoomData = async () => {
     client.on("User.currentlyActive", (event, user) => {
         let newCurrentlyActiveUser = user.currentlyActive;
         console.log(newCurrentlyActiveUser);
+    })
+    client.on("RoomMember.typing", (event, member) => {
+        console.log(event.getType(), " ", member.typing);
     })
     socialWindowStore.subscribe(() => {
         console.log(socialWindowStore.getState());
