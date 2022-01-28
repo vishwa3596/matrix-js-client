@@ -42,9 +42,9 @@ const SocialScroll = (props) => {
   const [userContactList, updateUserContactList] = useState([]);
   socialWindowStore.subscribe(() => {
     let userData = socialWindowStore.getState();
-    console.log(userData, " ", userData.CentralReducer);
+    //console.log(userData, " ", userData.CentralReducer);
     if(userData !== undefined){
-      console.log(userData.CentralReducer.contactList);
+      //console.log(userData.CentralReducer.contactList);
       userData = userData.CentralReducer.contactList
       updateUserContactList(userData);
     }

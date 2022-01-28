@@ -37,7 +37,6 @@ const SocialCard = (props) => {
     const [AvatarUrl, onSettingavatarUrl] = useState("");
     const [shouldRender, onShouldRender] = useState(false);
     const eachRoom = props.eachRoom;
-    console.log(eachRoom);
     const userName = eachRoom.name;
     let NotificationValue;
     let notificationCount = undefined;
@@ -49,7 +48,6 @@ const SocialCard = (props) => {
     axios.get(avatarUrl ,{
         responseType: "arraybuffer"
     }).then(response => {
-        console.log(response);
         let base64ImageString = Buffer.from(response.data, 'binary').toString('base64')
         let url = `data:image/png;base64,${base64ImageString}`;
         onSettingavatarUrl(url);
